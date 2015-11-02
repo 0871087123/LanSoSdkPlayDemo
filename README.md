@@ -7,4 +7,6 @@
 欢迎使用
 
 有问题, 可联系我们, support@lansongtech.com.
-这个代码库我们会不定期的更新,请关注, 谢谢.
+这个代码库我们会每周五更新稳定版本,请关注, 谢谢.
+
+This code we will update the stable version !!!
