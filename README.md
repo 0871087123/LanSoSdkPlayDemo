@@ -1,12 +1,12 @@
-ÕâÊÇÎÒÃÇµÄÊÓÆµSDK²¥·ÅÆ÷ÑİÊ¾³ÌĞò,È«ÃæÖ§³ÖÈí½âºÍÓ²½â,½Ó¿Ú¼òµ¥,»¶Ó­ÏÂÔØÊ¹ÓÃ. ÎÒÃÇÓĞ¸ü×¨ÒµÎÈ¶¨¿É¿¿µÄSDK°ü, ÆÚ´ıÄúµÄÉÌÎñºÏ×÷.  ¹ØÓÚÎÒÃÇ:Ìá¹©×¨ÒµÎÈ¶¨µÄandroid/iosÊÓÆµ±à½âÂëSDK¶àÃ½Ìå¿ª·¢¿ò¼Ü. Ìá¹©¸÷ÖÖ¹¦ÄÜµÄ¶¨ÖÆ·şÎñ.   This is our video SDK player demo, support Soft Codec and hardware Acceleration, simple interface, welcome to download. We have a more professional and reliable SDK package, look forward to your business cooperation.  About US: Provide professional stable android/ios video codec SDK multimedia development framework. Offers a variety of features customized services.
+è¿™æ˜¯æˆ‘ä»¬çš„è§†é¢‘SDKæ’­æ”¾å™¨æ¼”ç¤ºç¨‹åº,å…¨é¢æ”¯æŒè½¯è§£å’Œç¡¬è§£,æ¥å£ç®€å•,æ¬¢è¿ä¸‹è½½ä½¿ç”¨. æˆ‘ä»¬æœ‰æ›´ä¸“ä¸šç¨³å®šå¯é çš„SDKåŒ…, æœŸå¾…æ‚¨çš„å•†åŠ¡åˆä½œ.  å…³äºæˆ‘ä»¬:æä¾›ä¸“ä¸šç¨³å®šçš„android/iosè§†é¢‘ç¼–è§£ç SDKå¤šåª’ä½“å¼€å‘æ¡†æ¶. æä¾›å„ç§åŠŸèƒ½çš„å®šåˆ¶æœåŠ¡.   This is our video SDK player demo, support Soft Codec and hardware Acceleration, simple interface, welcome to download. We have a more professional and reliable SDK package, look forward to your business cooperation.  About US: Provide professional stable android/ios video codec SDK multimedia development framework. Offers a variety of features customized services.
 
 
-Õâ¸ö»ùÓÚÎÒÃÇ¿ª·¢µÄLanSoSdk¶ø×öµÄÒ»¸öÊÓÆµ²¥·ÅÆ÷ÑİÊ¾, °²×¿Æ½Ì¨, Ö§³ÖÈí½âºÍÓ²½â, µ±Ó²¼şµÄ²»ÊÇºÜÀíÏëµÄÊ±ºò»òÕß²»Ö§³ÖµÄÊ±ºò, ¿ÉÒÔÇĞ»»µ½Èí½âÄ£Ê½,·½±ãÄúµÄÊ¹ÓÃ.
-ÀïÃæÓĞdemoÔ´´úÂë,Âú×ãÊÓÆµ²¥·ÅµÄ»ù±¾ĞèÇó,½Ó¿Ú¼°Æä¼òµ¥, Äú¿ÉÒÔÈÎÒâ¸´ÖÆ´úÂë²¢ÔËÓÃÀïÃæµÄ¸÷ÖÖ´úÂë£¬µ±Ç°Ò²¿ÉÒÔÊ¹ÓÃµ½ÄúµÄÉÌÒµÈí¼şÖĞ. 
+è¿™ä¸ªåŸºäºæˆ‘ä»¬å¼€å‘çš„LanSoSdkè€Œåšçš„ä¸€ä¸ªè§†é¢‘æ’­æ”¾å™¨æ¼”ç¤º, å®‰å“å¹³å°, æ”¯æŒè½¯è§£å’Œç¡¬è§£, å½“ç¡¬ä»¶çš„ä¸æ˜¯å¾ˆç†æƒ³çš„æ—¶å€™æˆ–è€…ä¸æ”¯æŒçš„æ—¶å€™, å¯ä»¥åˆ‡æ¢åˆ°è½¯è§£æ¨¡å¼,æ–¹ä¾¿æ‚¨çš„ä½¿ç”¨.
+é‡Œé¢æœ‰demoæºä»£ç ,æ»¡è¶³è§†é¢‘æ’­æ”¾çš„åŸºæœ¬éœ€æ±‚,æ¥å£åŠå…¶ç®€å•, æ‚¨å¯ä»¥ä»»æ„å¤åˆ¶ä»£ç å¹¶è¿ç”¨é‡Œé¢çš„å„ç§ä»£ç ï¼Œå½“å‰ä¹Ÿå¯ä»¥ä½¿ç”¨åˆ°æ‚¨çš„å•†ä¸šè½¯ä»¶ä¸­. 
 
-»¶Ó­Ê¹ÓÃ
+æ¬¢è¿ä½¿ç”¨
 
-ÓĞÎÊÌâ, ¿ÉÁªÏµÎÒÃÇ, support@lansongtech.com.
-Õâ¸ö´úÂë¿âÎÒÃÇ»áÃ¿ÖÜÎå¸üĞÂÎÈ¶¨°æ±¾,Çë¹Ø×¢, Ğ»Ğ».
+æœ‰é—®é¢˜, å¯è”ç³»æˆ‘ä»¬, support@lansongtech.com.
+è¿™ä¸ªä»£ç åº“æˆ‘ä»¬ä¼šæ¯å‘¨äº”æ›´æ–°ç¨³å®šç‰ˆæœ¬,è¯·å…³æ³¨, è°¢è°¢.
 
-This code we will update the stable version !!!
+This code we will update the stable version  every Friday
