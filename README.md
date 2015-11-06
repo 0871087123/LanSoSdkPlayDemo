@@ -7,6 +7,11 @@
 欢迎使用
 
 有问题, 可联系我们, support@lansongtech.com.
-这个代码库我们会每周五更新稳定版本,请关注, 谢谢.
 
-This code we will update the stable version  every Friday
+
+功能包括:
+      基本播放功能: 设置视频源(本地/http/rtsp/rtmp), 开始,暂停, 停止,定位,获取当前时间,获取总时间,获取视频宽度/高度.
+      解码功能:     支持软件解码和硬件加速解码.
+      扩展功能:     支持播放速率可调,读取音视频轨道信息.支持声音延迟/快进.3D播放
+      
+      
