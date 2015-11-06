@@ -22,5 +22,14 @@
         android:text="use_software_codec_play"
         android:layout_marginTop="30dip"/>
             
+               
+		<Button 
+        android:id="@+id/id_main_3ddemo_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:text="3D Play Demo"
+        android:layout_marginTop="30dip"/>
+            
+            
          
 </LinearLayout>

@@ -24,14 +24,14 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
         //public static final int MediaChanged        = 0x100;
         //public static final int NothingSpecial      = 0x101;
         public static final int Opening             = 0x102;
-        //public static final int Buffering           = 0x103;
+        public static final int Buffering           = 0x103;  //add buffering EVENT....for URL
         public static final int Playing             = 0x104;
         public static final int Paused              = 0x105;
         public static final int Stopped             = 0x106;
         //public static final int Forward             = 0x107;
         //public static final int Backward            = 0x108;
         public static final int EndReached          = 0x109;
-        public static final int EncounteredError   = 0x10a;
+        public static final int EncounteredError   = 0x10a; 
         public static final int TimeChanged         = 0x10b;
         public static final int PositionChanged     = 0x10c;
         //public static final int SeekableChanged     = 0x10d;
@@ -44,7 +44,9 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
         public static final int ESAdded             = 0x114;
         public static final int ESDeleted           = 0x115;
         //public static final int ESSelected          = 0x116;
-
+        
+        public static final int HardwareAccelerationError           = 6001;
+        
         private final long arg1;
         private final float arg2;
         protected Event(int type) {
@@ -66,6 +68,9 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
             return arg1;
         }
         public float getPositionChanged() {
+            return arg2;
+        }
+        public float getBuffering() {  //0---100
             return arg2;
         }
         public int getVoutCount() {
@@ -111,15 +116,15 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
         @Override
         public void onSurfacesCreated(AWindow vout) 
         {
-            boolean play = false;
+            boolean isplay = false;
             boolean enableVideo = false;
             synchronized (MediaPlayer.this) {
                 if (!mPlaying && mPlayRequested)
-                    play = true;
+                    isplay = true;
                 else if (mVoutCount == 0)
                     enableVideo = true;
             }
-            if (play)
+            if (isplay)
                 play();
             else if (enableVideo)
                 setVideoTrackEnabled(true);
@@ -150,19 +155,30 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
         }
     });
 
-    public MediaPlayer() 
+    /**
+     * new a MediaPlayer Object. 
+     * after using . call {@link #release()} to release this object.
+     * 
+     * 
+     */
+    public MediaPlayer()  
     {
-    	mLibPlay=new LibPlay();
-    	
+    	mLibPlay =new LibPlay();
     	Log.i("MediaPlayer","current LanSoSdkPlay version is:"+mLibPlay.version());
-    	
     	mLibPlay.setOnHardwareAccelerationError(this);
-    	nativeNewFromLibPlay(mLibPlay, mWindow);
+    
+    	setNativeCrashListener();
+    	nativeNewFromLibPlay(mLibPlay, mWindow);	
     	setAudioOutput("android_audiotrack");
     }
+    
+    
     /**
-     * Sets the data source (file-path or http/rtsp URL) to use.
-     * @param path
+     * Sets the data source (Uri  object) to use.
+     * 
+     * @param path  the path of the uri. 
+     * 				if media is an absolute path, can use:  Uri path=Uri.fromFile(new File("/storage/sdcard1/xxxx.mp4"));
+     * 				if media is a http/rtsp/rtmp/ URL. can use: Uri path=Uri.parse("rtsp://192.168.1.33:554/xxxx");  
      */
     public void setDataSource(Uri path)
     {
@@ -173,12 +189,16 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
             setMedia(media);
             media.release(); 
             setRate(1.0f);
-    	} 
+    	}
     }
     /**
      * 
-     * @param path
-     * @param isOnlySW
+     *Sets the data source (Uri  object) to use.
+     *
+     * @param path	 the path of the uri. 
+     * 				if media is an absolute path, can use:  Uri path=Uri.fromFile(new File("/storage/sdcard1/xxxx.mp4"));
+     * 				if media is a http/rtsp/rtmp/ URL. can use: Uri path=Uri.parse("rtsp://192.168.1.33:554/xxxx");  
+     * @param isOnlySW  true if only use software codec.
      */
     public void setDataSource(Uri path,boolean isOnlySW) 
     {
@@ -195,7 +215,7 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
             setRate(1.0f);
     	}
     }
-    public void setMedia(Media media) {
+    private void setMedia(Media media) {
         if (media != null) {
             if (media.isReleased())
                 throw new IllegalArgumentException("Media is released");
@@ -207,7 +227,7 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
             }
             if (media != null)
                 media.retain();
-            mMedia = media;
+            mMedia = media;  ///here is valid. refcount=1;
         }
     }
 
@@ -216,15 +236,47 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
     	void eventHardwareAccelerationError();
     }
 	private onHardwareAccelerationErrorListener mOnHardwareAccelerationErrorListener=null;
+	
+	/**
+	 * * Register a callback to be invoked when the hardware  acceleration Error.
+	 * @param listener
+	 */
 	public void setOnHardwareAccelerationErrorListener(onHardwareAccelerationErrorListener listener)
 	{
 		mOnHardwareAccelerationErrorListener=listener;
 	}
 	
 	
+	public interface onNativeCrashListener {	    
+    	void onNativeCrash();
+    }
+	private onNativeCrashListener mOnNativeCrashListener=null;
+	
+	
+	/**
+	 * * Register a callback to be invoked when the native creashed
+	 * @param listener the callback that will be run
+	 */
+	public void setOnNativeCrashListener(onNativeCrashListener listener)
+	{
+		mOnNativeCrashListener=listener;
+	}
+	
+	private void setNativeCrashListener()
+	{
+		 LibPlay.setOnNativeCrashListener(new LibPlay.OnNativeCrashListener() {
+             @Override
+             public void onNativeCrash() {
+            	 if(mOnNativeCrashListener!=null)
+            	 {
+            		 mOnNativeCrashListener.onNativeCrash();
+            	 }
+             }
+         });
+	}
+	
     @Override
     public void eventHardwareAccelerationError() {
-    	Log.i("sno","eventHardwareAccelerationError....");
     	mHardwareAccelerationError = true;
     	if(mOnHardwareAccelerationErrorListener!=null)
     	{
@@ -232,7 +284,10 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
     	}
     }
 
-
+    /**
+     * set surfaceView to display video picture.
+     * @param view
+     */
     public void setVideoView(SurfaceView view)
     {
     	mWindow.setVideoView(view);
@@ -261,9 +316,6 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
     {
     	mWindow.sendMouseEvent(action,button,x,y);
     }
-    
-    
-  
 	
 	public interface onVideoSizeChangedListener {	    
     	void onVideoSizeChanged(MediaPlayer mediaplayer,int width, int height);
@@ -271,7 +323,10 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
 	private onVideoSizeChangedListener mOnVideoSizeChangedListener=null;
 	
 	
-	
+	/**
+	 * Register a callback to be invoked when the video size is known or updated.
+	 * @param listener the callback that will be run
+	 */
 	public void setOnVideoSizeChangedListener(onVideoSizeChangedListener listener)
 	{
 		mOnVideoSizeChangedListener=listener;
@@ -279,7 +334,9 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
 		mWindow.attachViews();
 	}
 	
-	
+	/**
+	 * remove video size changed callback.
+	 */
 	public void removeOnVideoSizeChangedListener()
 	{
 		mOnVideoSizeChangedListener=null;
@@ -331,8 +388,6 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
                     
                     mAudioReset = false;
                 }
-                
-                
                 mPlayRequested = true;
                 if (mWindow.areSurfacesWaiting())
                     return;
@@ -341,21 +396,72 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
         }
         nativePlay();
     }
+    
+    /**
+     * 
+     * @return   true if playing. or not false
+     */
     public boolean isVideoPlaying() {  
     	return mPlaying;
     }
     
-    
+    /**
+     * stop Media play
+     */
     public void stop() {
         synchronized (this) {
             mPlayRequested = false;
             mPlaying = false;
             mAudioReset = true;
         	mLibPlay.setOnHardwareAccelerationError(null); 
+        	mOnHardwareAccelerationErrorListener=null;
         }
         nativeStop();
     }
 
+    public synchronized void setEventListener(EventListener listener) {
+        super.setEventListener(listener);
+    }
+
+    @Override
+    protected synchronized Event onEventNative(int eventType, long arg1, float arg2) {
+        switch (eventType) {
+            case Event.Stopped:
+            case Event.EndReached:
+            case Event.EncounteredError:
+                mVoutCount = 0;
+                notify();
+            case Event.Buffering:
+            	return new Event(eventType,arg2);  //float type. percentage.
+            case Event.Opening:
+            case Event.Playing:
+            case Event.Paused:
+                return new Event(eventType);
+            case Event.TimeChanged:
+                return new Event(eventType, arg1);
+            case Event.PositionChanged:
+                return new Event(eventType, arg2);
+            case Event.Vout:
+                mVoutCount = (int) arg1;
+                notify();
+                return new Event(eventType, arg1);
+            case Event.ESAdded:
+            case Event.ESDeleted:
+                return new Event(eventType, arg1);
+        }
+        return null;
+    }
+
+    @Override
+    protected void onReleaseNative() {
+        if (mMedia != null)
+        	mMedia.release();
+        
+        nativeRelease();
+
+        if(mLibPlay!=null)
+        	mLibPlay.release();
+    }
    
     /**
      * Selects an audio output module.
@@ -364,7 +470,7 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
      *
      * @return true on success.
      */
-    public boolean setAudioOutput(String aout) {
+    private boolean setAudioOutput(String aout) {
         final boolean ret = nativeSetAudioOutput(aout);
         if (ret) {
             synchronized (this) {
@@ -380,7 +486,7 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
      *
      * @return true on success.
      */
-    public boolean setAudioOutputDevice(String id) {
+    private boolean setAudioOutputDevice(String id) {
         final boolean ret = nativeSetAudioOutputDevice(id);
         if (ret) {
             synchronized (this) {
@@ -612,73 +718,40 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
     public native long setTime(long time);
 
     /**
-     * Gets the movie position.
-     * @return the movie position, or -1 for any error.
+     * Gets the movie position. functions similar as getTime
+     * @return the movie position, or -1 for any error. unit :Percentage. min is 0%, max=100%.
+     * 
+     * 
      */
     public native float getPosition();
 
     /**
-     * Sets the movie position.
-     * @param pos: movie position.
+     * Sets the movie position.  functions similar as setTime.
+     * @param pos: movie position.  unit percentage, min is0%, max is 100%.
      */
     public native void setPosition(float pos);
 
     /**
-     * Gets current movie's length in ms.
+     * Gets current movie's length in ms. 
      * @return the movie length (in ms), or -1 if there is no media.
      */
     public native long getLength();
 
-    
-    
-    
-    public native void navigate(int navigate);
 
-    public synchronized void setEventListener(EventListener listener) {
-        super.setEventListener(listener);
-    }
-
-    @Override
-    protected synchronized Event onEventNative(int eventType, long arg1, float arg2) {
-        switch (eventType) {
-            case Event.Stopped:
-            case Event.EndReached:
-            case Event.EncounteredError:
-                mVoutCount = 0;
-                notify();
-            case Event.Opening:
-            case Event.Playing:
-            case Event.Paused:
-                return new Event(eventType);
-            case Event.TimeChanged:
-                return new Event(eventType, arg1);
-            case Event.PositionChanged:
-                return new Event(eventType, arg2);
-            case Event.Vout:
-                mVoutCount = (int) arg1;
-                notify();
-                return new Event(eventType, arg1);
-            case Event.ESAdded:
-            case Event.ESDeleted:
-                return new Event(eventType, arg1);
-        }
-        return null;
-    }
-
-    @Override
-    protected void onReleaseNative() {
-        if (mMedia != null)
-            mMedia.release();
-        nativeRelease();
-    }
 
     /* JNI */
     private native void nativeNewFromLibPlay(LibPlay libPlay, IAWindowNativeHandler window);
     private native void nativeNewFromMedia(Media media, IAWindowNativeHandler window);
+    
     private native void nativeRelease();
+    
     private native void nativeSetMedia(Media media);
+    
+    
     private native void nativePlay();
     private native void nativeStop();
+    
+    
     private native boolean nativeSetAudioOutput(String aout);
     private native boolean nativeSetAudioOutputDevice(String id);
     private native int nativeGetVideoTracksCount();

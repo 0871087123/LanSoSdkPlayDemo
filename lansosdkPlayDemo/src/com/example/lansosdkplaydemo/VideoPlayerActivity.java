@@ -15,6 +15,7 @@ package com.example.lansosdkplaydemo;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.KeyguardManager;
 import android.app.Presentation;
 import android.content.BroadcastReceiver;
@@ -101,332 +102,369 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Locale;
 
+public class VideoPlayerActivity extends Activity implements MediaPlayer.onVideoSizeChangedListener,MediaPlayer.onHardwareAccelerationErrorListener,SurfaceHolder.Callback 
+{
+	  public final static String TAG = "VideoPlayerActivity";
 
-public class VideoPlayerActivity extends Activity implements MediaPlayer.onVideoSizeChangedListener,SurfaceHolder.Callback {
+	    
+	    public final static String PLAY_LOCATION = "item_location";
+	    public final static String PLAY_IS_SOFTWARE_CODEC = "is_software_codec";
+	    
+	    private MediaPlayer mMediaPlayer;
+	    private SurfaceView mSurfaceView = null;
+		private SurfaceHolder holder;
+	    private FrameLayout mSurfaceFrame;
+	    
+	    
+	    private Uri mUri;
+	    private SeekBar mSeekbar;
+	    private TextView mTime;
+	    private TextView mLength;
+	    private Button mPlayPause;
+	    
+	    private boolean mCanSeek;
 
-    public final static String TAG = "VideoPlayerActivity";
+	    private static final int SHOW_PROGRESS = 201;
+	    private static final int HW_ERROR = 202; 
+	    @Override
+	    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
+	    protected void onCreate(Bundle savedInstanceState) {
+	        super.onCreate(savedInstanceState);
+	        setContentView(R.layout.player);
 
-    
-    public final static String PLAY_LOCATION = "item_location";
-    public final static String PLAY_IS_SOFTWARE_CODEC = "is_software_codec";
-    
-    private MediaPlayer mMediaPlayer;
-    private SurfaceView mSurfaceView = null;
-	private SurfaceHolder holder;
-    private FrameLayout mSurfaceFrame;
-    
-    
-    private Uri mUri;
-    private SeekBar mSeekbar;
-    private TextView mTime;
-    private TextView mLength;
-    private Button mPlayPause;
-    
-    private boolean mCanSeek;
+	        mTime = (TextView) findViewById(R.id.player_overlay_time);
+	        mLength = (TextView) findViewById(R.id.player_overlay_length);
 
-    private static final int SHOW_PROGRESS = 201;
-    @Override
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.player);
-
-        mTime = (TextView) findViewById(R.id.player_overlay_time);
-        mLength = (TextView) findViewById(R.id.player_overlay_length);
-
-        mPlayPause = (Button) findViewById(R.id.player_overlay_play);
-
-
-        mSurfaceView = (SurfaceView) findViewById(R.id.player_surface);
-        mSurfaceFrame = (FrameLayout) findViewById(R.id.player_surface_frame);
-
-        holder=mSurfaceView.getHolder();
-        holder.addCallback(this);
-        
-        mSeekbar = (SeekBar) findViewById(R.id.player_overlay_seekbar);
-
-        mSeekbar.setOnSeekBarChangeListener(mSeekListener);
-        mPlayPause.setOnClickListener(mPlayPauseListener); 
-    }
-    
-    @Override
-    public void surfaceChanged(SurfaceHolder holder, int format, int width,
-    		int height) {
-    	// TODO Auto-generated method stub
-    	
-    }
-    @Override
-    public void surfaceCreated(SurfaceHolder holder) {
-    	// TODO Auto-generated method stub
-    	Log.i(TAG, "surfaceChanged called");
-    	startPlayback();
-    }
-    @Override
-    public void surfaceDestroyed(SurfaceHolder holder) {
-    	// TODO Auto-generated method stub
-    		Log.i(TAG, "surfaceDestroyed called");
-    	  stopPlayback();
-    }
-    
-    
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    private void startPlayback() {
-
-        mUri = null;
-        Bundle extras = getIntent().getExtras();
-        mUri = extras.getParcelable(PLAY_LOCATION);
-
-        boolean isSwCodec=getIntent().getBooleanExtra(PLAY_IS_SOFTWARE_CODEC, false);
-        Log.i("sno",isSwCodec?"using SOFTWARE CODEC":"using FULL CODEC");
-        
-        mCanSeek = false;
-
-        if (mUri != null) 
-        {
-        	  	mMediaPlayer = new MediaPlayer();
-        	  	mMediaPlayer.setVideoView(mSurfaceView); 
-                    
-        	  	mMediaPlayer.setOnVideoSizeChangedListener(this);
-        	  	mSurfaceView.setKeepScreenOn(true);
-            	mMediaPlayer.stop();
-            	if(isSwCodec)
-            		mMediaPlayer.setDataSource(mUri,true);
-            	else
-            		mMediaPlayer.setDataSource(mUri);
-            	
-                mMediaPlayer.setEventListener(mMediaPlayerListener);
-                mMediaPlayer.play();
-        }
-    }
-
-    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
-    private void stopPlayback() {
-    	mMediaPlayer.removeOnVideoSizeChangedListener();
-        mMediaPlayer.setEventListener(null);
-        mSurfaceView.setKeepScreenOn(false);
-        mMediaPlayer.stop();  
-        mHandler.removeMessages(SHOW_PROGRESS);     
-    }
-
-  
+	        mPlayPause = (Button) findViewById(R.id.player_overlay_play);
 
 
-    private final MediaPlayer.EventListener mMediaPlayerListener = new MediaPlayer.EventListener() 
-    {
-        @Override
-        public void onEvent(MediaPlayer.Event event) {
-            switch (event.type) {
-                case MediaPlayer.Event.Playing:
-                    Log.i(TAG, "MediaPlayer.Event.Playing");
-                    break;
-                case MediaPlayer.Event.Paused:
-                    Log.i(TAG, "MediaPlayer.Event.Paused");
-                    break;
-                case MediaPlayer.Event.Stopped:
-                	 exitOK();
-                    break;
-                case MediaPlayer.Event.EndReached:
-                    Log.i(TAG, "MediaPlayer.Event.EndReached");
-                    endReached();
-                    break;
-                case MediaPlayer.Event.EncounteredError:
-                    encounteredError();
-                    break;
-                case MediaPlayer.Event.TimeChanged:
-                    break;
-                case MediaPlayer.Event.PositionChanged:
-                    mCanSeek = true;
-                    mHandler.sendEmptyMessage(SHOW_PROGRESS);
-                    break;
-                case MediaPlayer.Event.Vout:
-                case MediaPlayer.Event.ESAdded:
-                case MediaPlayer.Event.ESDeleted:
-                    break;
-            }
-        }
-    };
- 
+	        mSurfaceView = (SurfaceView) findViewById(R.id.player_surface);
+	        mSurfaceFrame = (FrameLayout) findViewById(R.id.player_surface_frame);
 
-    private void endReached() {
-        exitOK();
-    }
+	        holder=mSurfaceView.getHolder();
+	        holder.addCallback(this);
+	        
+	        mSeekbar = (SeekBar) findViewById(R.id.player_overlay_seekbar);
 
-    private void encounteredError() {
-        exitOK();
-    }
+	        mSeekbar.setOnSeekBarChangeListener(mSeekListener);
+	        mPlayPause.setOnClickListener(mPlayPauseListener); 
+	    }
+	    
+	    @Override
+	    public void surfaceChanged(SurfaceHolder holder, int format, int width,
+	    		int height) {
+	    	// TODO Auto-generated method stub
+	    	
+	    }
+	    @Override
+	    public void surfaceCreated(SurfaceHolder holder) {
+	    	// TODO Auto-generated method stub
+	    	startPlayback();
+	    }
+	    @Override
+	    public void surfaceDestroyed(SurfaceHolder holder) {
+	    	// TODO Auto-generated method stub
+	    	stopPlayback();
+	    }
+	    @Override
+	    protected void onPause() {
+	    	// TODO Auto-generated method stub
+	    	super.onPause();
+	    }
+	    
+	    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+	    private void startPlayback() {
+
+	        mUri = null;
+	        Bundle extras = getIntent().getExtras();
+	        mUri = extras.getParcelable(PLAY_LOCATION);
+
+	        boolean isSwCodec=getIntent().getBooleanExtra(PLAY_IS_SOFTWARE_CODEC, false);
+	        Log.i("sno",isSwCodec?"using SOFTWARE CODEC":"using FULL CODEC");
+	        
+	        mCanSeek = false;
+
+	        if (mUri != null) 
+	        {
+	        	  	mMediaPlayer = new MediaPlayer();
+	        	  	mMediaPlayer.setVideoView(mSurfaceView); 
+	                    
+	        	  	mMediaPlayer.setOnVideoSizeChangedListener(this);
+	        	  	mSurfaceView.setKeepScreenOn(true);
+	            	if(isSwCodec)
+	            		mMediaPlayer.setDataSource(mUri,true);
+	            	else
+	            		mMediaPlayer.setDataSource(mUri);
+	            	
+	                mMediaPlayer.setEventListener(mMediaPlayerListener);
+	                mMediaPlayer.setOnHardwareAccelerationErrorListener(this);
+	                mMediaPlayer.play();
+	        }
+	    }
+	    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
+	    private void stopPlayback() {
+	        mHandler.removeMessages(SHOW_PROGRESS);     
+	    	mMediaPlayer.removeOnVideoSizeChangedListener();
+	        mMediaPlayer.setEventListener(null);
+	        mSurfaceView.setKeepScreenOn(false);
+	        mMediaPlayer.stop();  
+	        mMediaPlayer.release();
+	    }
+
+	  
 
 
-    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
-    private void changeSurfaceLayout(int width, int height) {
-    	
-    	//holder.setFixedSize(width, height);  //当然,您也可以通过这样来设置, 无需下面的各种精细计算.
-    	
+	    private final MediaPlayer.EventListener mMediaPlayerListener = new MediaPlayer.EventListener() 
+	    {
+	        @Override
+	        public void onEvent(MediaPlayer.Event event) {
+	            switch (event.type) {
+	            	case MediaPlayer.Event.Buffering:
+	                    Log.i(TAG, "MediaPlayer.Event.Buffering"+event.getBuffering());
+	                    break;
+	                case MediaPlayer.Event.Playing:
+	                    Log.i(TAG, "MediaPlayer.Event.Playing");
+	                    break;
+	                case MediaPlayer.Event.Paused:
+	                    Log.i(TAG, "MediaPlayer.Event.Paused");
+	                    break;
+	                case MediaPlayer.Event.Stopped:
+	                	 exitOK();
+	                    break;
+	                case MediaPlayer.Event.EndReached:
+	                    Log.i(TAG, "MediaPlayer.Event.EndReached");
+	                    endReached();
+	                    break;
+	                case MediaPlayer.Event.EncounteredError:
+	                    Log.i(TAG, "MediaPlayer.Event.EncounteredError");
+	                    Toast.makeText(VideoPlayerActivity.this, 
+								"MediaPlayer encounter Error.please check your input path/URL!!", Toast.LENGTH_LONG).show();
+	                    finish();
+	                    break;
+	                case MediaPlayer.Event.TimeChanged:
+	                    break;
+	                case MediaPlayer.Event.PositionChanged:
+	                    mCanSeek = true;
+	                    mHandler.sendEmptyMessage(SHOW_PROGRESS);
+	                    break;
+	                case MediaPlayer.Event.Vout:
+	                case MediaPlayer.Event.ESAdded:
+	                case MediaPlayer.Event.ESDeleted:
+	                    break;
+	            }
+	        }
+	    };
+	 
 
-        int length = (int) mMediaPlayer.getLength();
-        mLength.setText(millisToString(length));
-        
-        
-        int screenWidth= getWindow().getDecorView().getWidth();
-        int screenHeight = getWindow().getDecorView().getHeight();
-        
-        if (mMediaPlayer != null) {
-            mMediaPlayer.setWindowSize(screenWidth, screenHeight);
-        }
-        
-        double dstWidth = screenWidth, dstHeight = screenHeight;  //目标宽高.
-        boolean isPortrait; //是否是竖屏.
+	    private void endReached() {
+	        exitOK();
+	    }
 
-        isPortrait = getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT;
-        if (screenWidth > screenHeight && isPortrait || screenWidth < screenHeight && !isPortrait) {
-            dstWidth = screenHeight;
-            dstHeight = screenWidth;
-        }
+	    @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
+	    private void changeSurfaceLayout(int width, int height) {
+	    	
+	    	//holder.setFixedSize(width, height);  //当然,您也可以通过这样来设置, 无需下面的各种精细计算.
 
-        // sanity check
-        if (dstWidth * dstHeight == 0 || width * height == 0) {
-            Log.e(TAG, "Invalid surface size");
-            return;
-        }
+	        int length = (int) mMediaPlayer.getLength();
+	        mLength.setText(millisToString(length));
+	        
+	        
+	        int screenWidth= getWindow().getDecorView().getWidth();
+	        int screenHeight = getWindow().getDecorView().getHeight();
+	        
+	        if (mMediaPlayer != null) {
+	            mMediaPlayer.setWindowSize(screenWidth, screenHeight);
+	        }
+	        
+	        double dstWidth = screenWidth, dstHeight = screenHeight;  //目标宽高.
+	        boolean isPortrait; //是否是竖屏.
 
-        double sar = (double)width / (double)height;
+	        isPortrait = getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT;
+	        if (screenWidth > screenHeight && isPortrait || screenWidth < screenHeight && !isPortrait) {
+	            dstWidth = screenHeight;
+	            dstHeight = screenWidth;
+	        }
 
-        double dar = dstWidth / dstHeight; 
+	        // sanity check
+	        if (dstWidth * dstHeight == 0 || width * height == 0) {
+	            Log.e(TAG, "Invalid surface size");
+	            return;
+	        }
 
-        //如果屏幕的宽高比, 小于 视频的宽高比.则说明屏幕的宽度小于屏幕的高度,则应放大屏幕的高度
-        if (dar < sar) 
-            dstHeight = dstWidth / sar;
-        else
-            dstWidth = dstHeight * sar;
-              
-        LayoutParams lp = mSurfaceView.getLayoutParams();
-        lp.width  = (int) Math.ceil(dstWidth);
-        lp.height = (int) Math.ceil(dstHeight);
-        
-        mSurfaceView.setLayoutParams(lp);
-        
-        lp = mSurfaceFrame.getLayoutParams();
-        lp.height = (int) Math.floor(dstHeight);
-        mSurfaceFrame.setLayoutParams(lp); 
-        mSurfaceView.invalidate();
-    }
-    @Override
-    public void onVideoSizeChanged(MediaPlayer mediaplayer,int width, int height) 
-    {
-        if (width * height == 0)
-            return;
+	        double sar = (double)width / (double)height;
 
-        changeSurfaceLayout(width,height);
-    }
-    private final OnSeekBarChangeListener mSeekListener = new OnSeekBarChangeListener() {
+	        double dar = dstWidth / dstHeight; 
 
-        @Override
-        public void onStartTrackingTouch(SeekBar seekBar) {
-        }
+	        //如果屏幕的宽高比, 小于 视频的宽高比.则说明屏幕的宽度小于屏幕的高度,则应放大屏幕的高度
+	        if (dar < sar) 
+	            dstHeight = dstWidth / sar;
+	        else
+	            dstWidth = dstHeight * sar;
+	              
+	        LayoutParams lp = mSurfaceView.getLayoutParams();
+	        lp.width  = (int) Math.ceil(dstWidth);
+	        lp.height = (int) Math.ceil(dstHeight);
+	        
+	        mSurfaceView.setLayoutParams(lp);
+	        
+	        lp = mSurfaceFrame.getLayoutParams();
+	        lp.height = (int) Math.floor(dstHeight);
+	        mSurfaceFrame.setLayoutParams(lp); 
+	        mSurfaceView.invalidate();
+	    }
+	    AlertDialog  alertDialog;
+	    private void encounteredError() {
+	    	  alertDialog = new AlertDialog.Builder(VideoPlayerActivity.this)
+	         .setOnCancelListener(new DialogInterface.OnCancelListener() {
+	             @Override
+	             public void onCancel(DialogInterface dialog) {
+	            	 exitOK();
+	            	 finish();
+	             }
+	         })
+	         .setPositiveButton("No", new DialogInterface.OnClickListener() {
+	             @Override
+	             public void onClick(DialogInterface dialog, int id) {
+	            	 
+	             }
+	         })
+	           .setNegativeButton("Exit", new DialogInterface.OnClickListener() {
+	            @Override
+	            public void onClick(DialogInterface dialog, int id) {
+	            	 exitOK();
+	            }
+	        })
+	         .setTitle("title")
+	         .setMessage("Hardware acceleration error!,are you Exit?")
+	         .create();
+	    	alertDialog.show();
+	    }
+	    
+	    @Override
+	    public void eventHardwareAccelerationError()
+	    {
+	    	mHandler.sendEmptyMessage(HW_ERROR);
+	    }
+	    @Override
+	    public void onVideoSizeChanged(MediaPlayer mediaplayer,int width, int height) 
+	    {
+	        if (width * height == 0)
+	            return;
 
-        @Override
-        public void onStopTrackingTouch(SeekBar seekBar) {
-        }
+	        changeSurfaceLayout(width,height);
+	    }
+	    private final OnSeekBarChangeListener mSeekListener = new OnSeekBarChangeListener() {
 
-        @Override
-        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-            if (fromUser && mCanSeek) 
-            {
-                float length=mMediaPlayer.getLength();
-                
-                if (length == 0f)
-                	mMediaPlayer.setTime(progress);
-                else
-                	mMediaPlayer.setPosition(progress / length);
-                
-                int time2 = (int) mMediaPlayer.getTime();
-                int length2 = (int) mMediaPlayer.getLength();
-                
-                mSeekbar.setMax(length2);
-                mSeekbar.setProgress(time2);
-                mTime.setText(millisToString(progress));
-            }
-        }
-    };
+	        @Override
+	        public void onStartTrackingTouch(SeekBar seekBar) {
+	        	if(mMediaPlayer.isPlaying())
+		        mHandler.removeMessages(SHOW_PROGRESS);   
+	        }
 
-    private final OnClickListener mPlayPauseListener = new OnClickListener() {
-        @Override
-        public void onClick(View v) 
-        {
-        	 if (mMediaPlayer.isPlaying()) 
-        	 {
-        	    	mMediaPlayer.pause();
-        	        mSurfaceView.setKeepScreenOn(false);
-        	        mHandler.removeMessages(SHOW_PROGRESS);     
-        	        mPlayPause.setBackgroundResource(R.drawable.ic_play_circle_normal);
-             } 
-        	 else 
-             {
-             	mMediaPlayer.play();
-            	mSurfaceView.setKeepScreenOn(true);
-                mHandler.sendEmptyMessage(SHOW_PROGRESS);
-    	        mPlayPause.setBackgroundResource(R.drawable.ic_pause_circle_normal);
-             }
-        }
-    };
-    /**
-     * Handle resize of the surface and the overlay
-     */
-    private final Handler mHandler = new Handler(Looper.getMainLooper(), new Handler.Callback() {
-        @Override
-        public boolean handleMessage(Message msg) {
+	        @Override
+	        public void onStopTrackingTouch(SeekBar seekBar) {
+	        	if(mMediaPlayer.isPlaying())
+	        	{
+	        		Message  msg = mHandler.obtainMessage(SHOW_PROGRESS);
+	        		mHandler.sendMessageDelayed(msg, 500);	
+	        	}	
+	        }
 
-            switch (msg.what) {
-                case SHOW_PROGRESS:
-                    int time = (int) mMediaPlayer.getTime();
-                    int length = (int) mMediaPlayer.getLength();
-                 
-                    mSeekbar.setMax(length);
-                    mSeekbar.setProgress(time);        
-                    if (time >= 0) mTime.setText(millisToString(time));
-                    if (mCanSeek) {
-                        msg = mHandler.obtainMessage(SHOW_PROGRESS);
-                        mHandler.sendMessageDelayed(msg, 1000 - (time % 1000));
-                    }
-                    break;
-            }
-            return true;
-        }
-    });
-    private void exit(int resultCode){
-        setResult(resultCode);
-        finish();
-    }
+	        @Override
+	        public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+	            if (fromUser && mCanSeek) 
+	            {
+	                	mMediaPlayer.setTime(progress);
+	                	mTime.setText(millisToString(progress));
+	            }
+	        }
+	    };
 
-    private void exitOK() {
-        exit(RESULT_OK);
-    }
-  
-    @Override
-    public void onBackPressed() {
-            exitOK();
-    }
+	    private final OnClickListener mPlayPauseListener = new OnClickListener() {
+	        @Override
+	        public void onClick(View v) 
+	        {
+	        	 if (mMediaPlayer.isPlaying()) 
+	        	 {
+	        	    	mMediaPlayer.pause();
+	        	        mSurfaceView.setKeepScreenOn(false);
+	        	        mHandler.removeMessages(SHOW_PROGRESS);     
+	        	        mPlayPause.setBackgroundResource(R.drawable.ic_play_circle_normal);
+	             } 
+	        	 else 
+	             {
+	             	mMediaPlayer.play();
+	            	mSurfaceView.setKeepScreenOn(true);
+	                mHandler.sendEmptyMessage(SHOW_PROGRESS);
+	    	        mPlayPause.setBackgroundResource(R.drawable.ic_pause_circle_normal);
+	             }
+	        }
+	    };
+	    /**
+	     * Handle resize of the surface and the overlay
+	     */
+	    private final Handler mHandler = new Handler(Looper.getMainLooper(), new Handler.Callback() {
+	        @Override
+	        public boolean handleMessage(Message msg) {
 
-    
-    static String millisToString(long millis) {
-        boolean negative = millis < 0;
-        millis = java.lang.Math.abs(millis);
+	            switch (msg.what) {
+	                case SHOW_PROGRESS:
+	                		int time = (int) mMediaPlayer.getTime();
+	                		int length = (int) mMediaPlayer.getLength();
+	                		mSeekbar.setMax(length);
+	                		mSeekbar.setProgress(time);        
+	                		if (time >= 0) mTime.setText(millisToString(time));
+	                		if (mCanSeek) {
+	                           msg = mHandler.obtainMessage(SHOW_PROGRESS);
+	                           int time2=length-time;
+	                          	mHandler.sendMessageDelayed(msg, time2>1000? 1000: time2);
+	                		}
+	                    break;
+	                case HW_ERROR:
+	                	encounteredError();
+	                	break;
+	            }
+	            return true;
+	        }
+	    });
+	    private void exit(int resultCode){
+	        setResult(resultCode);
+	        finish();
+	    }
 
-        millis /= 1000;
-        int sec = (int) (millis % 60);
-        millis /= 60;
-        int min = (int) (millis % 60);
-        millis /= 60;
-        int hours = (int) millis;
+	    private void exitOK() {
+	        exit(RESULT_OK);
+	    }
+	  
+	    @Override
+	    public void onBackPressed() {
+	            exitOK();
+	    }
 
-        String time;
-        DecimalFormat format = (DecimalFormat)NumberFormat.getInstance(Locale.US);
-        format.applyPattern("00");
-       
-            if (millis > 0)
-                time = (negative ? "-" : "") + hours + ":" + format.format(min) + ":" + format.format(sec);
-            else
-                time = (negative ? "-" : "") + min + ":" + format.format(sec);
-        return time;
-    }
-    
-}
+	    
+	    static String millisToString(long millis) {
+	        boolean negative = millis < 0;
+	        millis = java.lang.Math.abs(millis);
+
+	        millis /= 1000;
+	        int sec = (int) (millis % 60);
+	        millis /= 60;
+	        int min = (int) (millis % 60);
+	        millis /= 60;
+	        int hours = (int) millis;
+
+	        String time;
+	        DecimalFormat format = (DecimalFormat)NumberFormat.getInstance(Locale.US);
+	        format.applyPattern("00");
+	       
+	            if (millis > 0)
+	                time = (negative ? "-" : "") + hours + ":" + format.format(min) + ":" + format.format(sec);
+	            else
+	                time = (negative ? "-" : "") + min + ":" + format.format(sec);
+	        return time;
+	    }
+
+	    
+	  
+	    
+	}

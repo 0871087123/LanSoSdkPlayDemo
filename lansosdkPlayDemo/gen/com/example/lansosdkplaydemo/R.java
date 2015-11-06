@@ -41,23 +41,27 @@ public final class R {
         public static final int seekbar_thumb=0x7f020006;
     }
     public static final class id {
-        public static final int action_settings=0x7f09000b;
+        public static final int action_settings=0x7f09000e;
+        public static final int id_main_3ddemo_btn=0x7f090002;
         public static final int id_main_allcodec_btn=0x7f090000;
         public static final int id_main_software_btn=0x7f090001;
-        public static final int player_overlay_buttons=0x7f090009;
-        public static final int player_overlay_length=0x7f090008;
-        public static final int player_overlay_play=0x7f09000a;
-        public static final int player_overlay_seekbar=0x7f090006;
-        public static final int player_overlay_time=0x7f090007;
-        public static final int player_surface=0x7f090003;
-        public static final int player_surface_frame=0x7f090002;
-        public static final int progress_overlay=0x7f090005;
-        public static final int subtitles_surface=0x7f090004;
+        public static final int player_overlay_buttons=0x7f09000c;
+        public static final int player_overlay_length=0x7f09000b;
+        public static final int player_overlay_play=0x7f09000d;
+        public static final int player_overlay_seekbar=0x7f090009;
+        public static final int player_overlay_time=0x7f09000a;
+        public static final int player_surface=0x7f090004;
+        public static final int player_surface2=0x7f090007;
+        public static final int player_surface_frame=0x7f090003;
+        public static final int player_surface_frame2=0x7f090006;
+        public static final int progress_overlay=0x7f090008;
+        public static final int subtitles_surface=0x7f090005;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int player=0x7f030001;
-        public static final int player_hud=0x7f030002;
+        public static final int play_3d=0x7f030001;
+        public static final int player=0x7f030002;
+        public static final int player_hud=0x7f030003;
     }
     public static final class menu {
         public static final int main=0x7f080000;
