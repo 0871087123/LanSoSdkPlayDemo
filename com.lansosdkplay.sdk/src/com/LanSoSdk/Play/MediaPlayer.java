@@ -12,7 +12,12 @@ package com.LanSoSdk.Play;
 
 
 
+
+import java.io.File;
+
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.net.Uri;
 import android.util.Log;
 import android.view.SurfaceView;
@@ -46,7 +51,6 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
         //public static final int ESSelected          = 0x116;
         
         public static final int HardwareAccelerationError           = 6001;
-        
         private final long arg1;
         private final float arg2;
         protected Event(int type) {
@@ -161,14 +165,14 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
      * 
      * 
      */
-    public MediaPlayer()  
+    public MediaPlayer(Context context)  
     {
     	mLibPlay =new LibPlay();
     	Log.i("MediaPlayer","current LanSoSdkPlay version is:"+mLibPlay.version());
     	mLibPlay.setOnHardwareAccelerationError(this);
     
     	setNativeCrashListener();
-    	nativeNewFromLibPlay(mLibPlay, mWindow);	
+    	nativeNewFromLibPlay(context,mLibPlay, mWindow);	
     	setAudioOutput("android_audiotrack");
     }
     
@@ -740,7 +744,7 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
 
 
     /* JNI */
-    private native void nativeNewFromLibPlay(LibPlay libPlay, IAWindowNativeHandler window);
+    private native void nativeNewFromLibPlay(Context ctx,LibPlay libPlay, IAWindowNativeHandler window);
     private native void nativeNewFromMedia(Media media, IAWindowNativeHandler window);
     
     private native void nativeRelease();
@@ -771,5 +775,39 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
     private native long nativeGetSpuDelay();
     private native boolean nativeSetSpuDelay(long delay);
     private native boolean nativeSetSubtitleFile(String path);
-	
+
+    
+    
+    
+    public native void setDisableAllEffect();  //新增的两个函数.
+    public native String getCurrentEffects();
+    
+    //video picture effects....
+    public native void setEnableAnaglyph(boolean isEnable);  //3D
+    public native void setEnableMirror(boolean isEnable);
+    public native void setEnablePsychedelic(boolean isEnable);
+    public native void setEnableWave(boolean isEnable);
+    public native void setEnableRipple(boolean isEnable);
+    public native void setEnableMotiondetect(boolean isEnable);
+    
+    public native void setEnableInvert(boolean isEnable);
+    public native void setEnablePosterize(boolean isEnable);
+    
+
+    public native void setEnableExtract(boolean isEnable);
+    public native void setExtractValue(int value);
+    
+    public native void setEnableSepia(boolean isEnable);
+    public native void setSepiaValue(int value); 
+
+    public native void setEnableMotionblur(boolean isEnable);
+    public native void setMotionblurValue(int value);    
+    
+    //video adjuct effectttt... gamma..and so on...
+    public native void setEnableAdjuct(boolean isEnable);
+    public native boolean setContrastValue(float value);
+    public native boolean setBrightnessValue(float value);
+    public native boolean setHueValue(float value);
+    public native boolean setSaturationValue(float value);
+    public native boolean setGammaValue(float value);
 }

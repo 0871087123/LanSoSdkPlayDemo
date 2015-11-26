@@ -521,3 +521,4 @@ public class Thumbnail {
     }
     private static native byte[] nativeGetThumbnail(Media media, int i_width, int i_height);
 }
+

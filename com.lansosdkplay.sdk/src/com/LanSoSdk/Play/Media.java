@@ -18,10 +18,8 @@ import android.util.Log;
 import com.LanSoSdk.Play.Util.HWDecoderUtil;
 
 import java.io.FileDescriptor;
-
 @SuppressWarnings("unused")
-public class Media extends PlayObject<Media.Event> 
-{
+public class Media extends PlayObject<Media.Event> {
     private final static String TAG = "Media";
 
     public static class Event extends PlayEvent {
@@ -40,8 +38,6 @@ public class Media extends PlayObject<Media.Event>
 
     public interface EventListener extends PlayEvent.Listener<Media.Event> {}
 
-    /**
-     */
     public static class Type {
         public static final int Unknown = 0;
         public static final int File = 1;
@@ -51,8 +47,6 @@ public class Media extends PlayObject<Media.Event>
         public static final int Playlist = 5;
     }
 
-    /**
-     */
     public static class Meta {
         public static final int Title = 0;
         public static final int Artist = 1;
@@ -82,8 +76,6 @@ public class Media extends PlayObject<Media.Event>
         public static final int MAX = 25;
     }
 
-    /**
-     */
     public static class State {
         public static final int NothingSpecial = 0;
         public static final int Opening = 1;
@@ -96,8 +88,6 @@ public class Media extends PlayObject<Media.Event>
         public static final int MAX = 8;
     }
 
-    /**
-     */
     public static class Parse {
         public static final int ParseLocal   = 0;
         public static final int ParseNetwork = 0x01;
@@ -105,8 +95,6 @@ public class Media extends PlayObject<Media.Event>
         public static final int FetchNetwork = 0x04;
     }
 
-    /**
-     */
     public static abstract class Track {
         public static class Type {
             public static final int Unknown = -1;
@@ -170,8 +158,7 @@ public class Media extends PlayObject<Media.Event>
 
         private VideoTrack(String codec, String originalCodec, int id, int profile,
                 int level, int bitrate, String language, String description,
-                int height, int width, int sarNum, int sarDen, int frameRateNum, int frameRateDen) 
-        {
+                int height, int width, int sarNum, int sarDen, int frameRateNum, int frameRateDen) {
             super(Type.Video, codec, originalCodec, id, profile, level, bitrate, language, description);
             this.height = height;
             this.width = width;
@@ -179,24 +166,6 @@ public class Media extends PlayObject<Media.Event>
             this.sarDen = sarDen;
             this.frameRateNum = frameRateNum;
             this.frameRateDen = frameRateDen;
-            
-            
-            Log.i("sno","VideoTrack:"+
-            			" height: "+height+
-            			" width: "+width+
-            			" sarNum:"+sarNum+
-            			" sarDen:"+sarDen+
-            			" frameRateNum: "+frameRateNum+
-            			" frameRateDen: "+frameRateDen+
-            			" codec: "+codec+
-            			" originalCodec: "+originalCodec+
-            			" id: "+id+
-            			" profile: "+profile+
-            			" level: "+level+
-            			" bitrate: "+bitrate+
-            			" language:"+language+
-            			" description: "+description);
-            
         }
     }
 
@@ -234,53 +203,47 @@ public class Media extends PlayObject<Media.Event>
     private static final int PARSE_STATUS_PARSED = 0x02;
 
     private Uri mUri = null;
+    private MediaList mSubItems = null;
     private int mParseStatus = PARSE_STATUS_INIT;
     private final String mNativeMetas[] = new String[Meta.MAX];
     private Track mNativeTracks[] = null;
     private long mDuration = -1;
     private int mState = -1;
     private int mType = -1;
-    private boolean mCodecOptionSet = false;   //codec setting flag
+    private boolean mCodecOptionSet = false;
 
-    /**
-     * Create a Media from LibPlay and a local path starting with '/'.
-     *
-     * @param libPlay a valid LibPlay
-     * @param path an absolute local path
-     */
-    public Media(LibPlay libPlay, String path) { 
-        nativeNewFromPath(libPlay, path);
+    public Media(LibPlay libplay, String path) {
+        nativeNewFromPath(libplay, path);
         mUri = UriFromMrl(nativeGetMrl());
     }
 
-    /**
-     * Create a Media from libPlay and a Uri
-     *
-     * @param libPlay a valid libPlay
-     * @param uri a valid RFC 2396 Uri
-     */
-    public Media(LibPlay libPlay, Uri uri) {
-        nativeNewFromLocation(libPlay, locationFromUri(uri));
+    public Media(LibPlay libplay, Uri uri) {
+        nativeNewFromLocation(libplay, locationFromUri(uri));
         mUri = uri;
     }
 
-    /**
-     * Create a Media from libPlay and a FileDescriptor
-     *
-     * @param libPlay a valid libPlay
-     * @param fd file descriptor object
-     */
-    public Media(LibPlay libPlay, FileDescriptor fd) {
-        nativeNewFromFd(libPlay, fd);
+    public Media(LibPlay libplay, FileDescriptor fd) {
+        nativeNewFromFd(libplay, fd);
         mUri = UriFromMrl(nativeGetMrl());
     }
 
-    
+    /**
+     *
+     * @param ml Should not be released and locked
+     * @param index index of the Media from the MediaList
+     */
+    protected Media(MediaList ml, int index) {
+        if (ml == null || ml.isReleased())
+            throw new IllegalArgumentException("MediaList is null or released");
+        if (!ml.isLocked())
+            throw new IllegalStateException("MediaList should be locked");
+        nativeNewFromMediaList(ml, index);
+        mUri = UriFromMrl(nativeGetMrl());
+    }
 
     private static final String URI_AUTHORIZED_CHARS = "!'()*";
 
-    private static Uri UriFromMrl(String mrl) 
-    {
+    private static Uri UriFromMrl(String mrl) {
         final char array[] = mrl.toCharArray();
         final StringBuilder sb = new StringBuilder(array.length);
 
@@ -319,6 +282,11 @@ public class Media extends PlayObject<Media.Event>
 
         return sb.toString();
     }
+
+    public void setEventListener(EventListener listener) {
+        super.setEventListener(listener);
+    }
+
     @Override
     protected synchronized Event onEventNative(int eventType, long arg1, float arg2) {
         switch (eventType) {
@@ -384,7 +352,25 @@ public class Media extends PlayObject<Media.Event>
         }
     }
 
-   
+    /**
+     * Get the subItems MediaList associated with the Media. This Media should be alive (not released).
+     *
+     * @return subItems as a MediaList. This MediaList should be released with {@link #release()}.
+     */
+    public MediaList subItems() {
+        synchronized (this) {
+            if (mSubItems != null) {
+                mSubItems.retain();
+                return mSubItems;
+            }
+        }
+        final MediaList subItems = new MediaList(this);
+        synchronized (this) {
+            mSubItems = subItems;
+            mSubItems.retain();
+            return mSubItems;
+        }
+    }
 
     private synchronized void postParse() {
         // fetch if parsed and not fetched
@@ -554,31 +540,40 @@ public class Media extends PlayObject<Media.Event>
      * @param force force hw acceleration even for unknown devices
      */
     public void setHWDecoderEnabled(boolean enabled, boolean force) {
-    	
         final HWDecoderUtil.Decoder decoder = enabled ?
                 HWDecoderUtil.getDecoderFromDevice() :
                 HWDecoderUtil.Decoder.NONE;
 
         if (decoder == HWDecoderUtil.Decoder.NONE ||
-                (decoder == HWDecoderUtil.Decoder.UNKNOWN && !force)) 
-        {
-        	nativeSetCodec(1);
+                (decoder == HWDecoderUtil.Decoder.UNKNOWN && !force)) {
+            addOption(":codec=all");
             return;
         }
-        	nativeSetCodec(0);
-        	
-        final StringBuilder sb = new StringBuilder(":codec=");        
+
+        /*
+         * Set higher caching values if using iomx decoding, since some omx
+         * decoders have a very high latency, and if the preroll data isn't
+         * enough to make the decoder output a frame, the playback timing gets
+         * started too soon, and every decoded frame appears to be too late.
+         * On Nexus One, the decoder latency seems to be 25 input packets
+         * for 320x170 H.264, a few packets less on higher resolutions.
+         * On Nexus S, the decoder latency seems to be about 7 packets.
+         */
+        addOption(":file-caching=1500");
+        addOption(":network-caching=1500");
+
+        final StringBuilder sb = new StringBuilder(":codec=");
         if (decoder == HWDecoderUtil.Decoder.MEDIACODEC)
             sb.append(getMediaCodecModule()).append(",");
-        
         else if (decoder == HWDecoderUtil.Decoder.OMX)
             sb.append("iomx,");
         else
-            sb.append(getMediaCodecModule()).append(",iomx,");        
+            sb.append(getMediaCodecModule()).append(",iomx,");
         sb.append("all");
 
         addOption(sb.toString());
     }
+
     /**
      * Enable HWDecoder options if not already set
      */
@@ -588,7 +583,7 @@ public class Media extends PlayObject<Media.Event>
             codecOptionSet = mCodecOptionSet;
             mCodecOptionSet = true;
         }
-        if (!codecOptionSet) //if not set. here setting.
+        if (!codecOptionSet)
             setHWDecoderEnabled(true, false);
     }
 
@@ -604,11 +599,11 @@ public class Media extends PlayObject<Media.Event>
         }
         nativeAddOption(option);
     }
-    
-    
 
     @Override
     protected void onReleaseNative() {
+        if (mSubItems != null)
+            mSubItems.release();
         nativeRelease();
     }
 
@@ -616,7 +611,7 @@ public class Media extends PlayObject<Media.Event>
     private native void nativeNewFromPath(LibPlay libPlay, String path);
     private native void nativeNewFromLocation(LibPlay libPlay, String location);
     private native void nativeNewFromFd(LibPlay libPlay, FileDescriptor fd);
-    
+    private native void nativeNewFromMediaList(MediaList ml, int index);
     private native void nativeRelease();
     private native boolean nativeParseAsync(int flags);
     private native boolean nativeParse(int flags);

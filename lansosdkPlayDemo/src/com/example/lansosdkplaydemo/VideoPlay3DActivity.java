@@ -181,7 +181,7 @@ public class VideoPlay3DActivity extends Activity implements MediaPlayer.onVideo
 
         if (mUri != null) 
         {
-        	  	mMediaPlayer = new MediaPlayer();
+        	  	mMediaPlayer = new MediaPlayer(this);
         	  	
         	  	mMediaPlayer.setVideoSurface2Showing(true);
         	  	mMediaPlayer.setVideoView(mSurfaceView); 
@@ -200,8 +200,6 @@ public class VideoPlay3DActivity extends Activity implements MediaPlayer.onVideo
     private void stopPlayback() {
     	mMediaPlayer.removeOnVideoSizeChangedListener();
         mMediaPlayer.setEventListener(null);
-        
-    	
         mMediaPlayer.stop();  
         mMediaPlayer.release();
         mHandler.removeMessages(SHOW_PROGRESS);     

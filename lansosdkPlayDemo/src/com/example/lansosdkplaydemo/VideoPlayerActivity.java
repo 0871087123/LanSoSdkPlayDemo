@@ -186,7 +186,7 @@ public class VideoPlayerActivity extends Activity implements MediaPlayer.onVideo
 
 	        if (mUri != null) 
 	        {
-	        	  	mMediaPlayer = new MediaPlayer();
+	        	  	mMediaPlayer = new MediaPlayer(this);
 	        	  	mMediaPlayer.setVideoView(mSurfaceView); 
 	                    
 	        	  	mMediaPlayer.setOnVideoSizeChangedListener(this);
