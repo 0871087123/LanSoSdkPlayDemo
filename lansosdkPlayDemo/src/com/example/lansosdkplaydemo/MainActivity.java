@@ -15,6 +15,8 @@ package com.example.lansosdkplaydemo;
 
 import java.io.File;
 
+import com.example.lansosdk.util.snoCrashHandler;
+
 
 import android.app.Activity;
 import android.content.Intent;
@@ -41,11 +43,13 @@ public class MainActivity extends Activity implements OnClickListener {
 		 Thread.setDefaultUncaughtExceptionHandler(new snoCrashHandler());
         setContentView(R.layout.activity_main);
     
-       // path = "/storage/sdcard1/chongchukabuer.mp4";
+        path = "/storage/sdcard1/chongchukabuer.mp4";
     	findViewById(R.id.id_main_allcodec_btn).setOnClickListener(this);
     	findViewById(R.id.id_main_software_btn).setOnClickListener(this);
     	findViewById(R.id.id_main_3ddemo_btn).setOnClickListener(this);
+    	findViewById(R.id.id_main_effectdemo_btn).setOnClickListener(this);
         
+    	
     }
     @Override
     public void onClick(View v) {
@@ -60,6 +64,9 @@ public class MainActivity extends Activity implements OnClickListener {
 		case R.id.id_main_3ddemo_btn:
 				play3DDemo();
 				break;
+		case R.id.id_main_effectdemo_btn:
+			playVideoEffect();
+			break;
 
 		default:
 			break;
@@ -108,4 +115,18 @@ public class MainActivity extends Activity implements OnClickListener {
 		     intent.putExtra(VideoPlayerActivity.PLAY_IS_SOFTWARE_CODEC, true);
 		     startActivity(intent);
     }
+    private void playVideoEffect()
+    {
+    	if (path == "") {
+			Toast.makeText(MainActivity.this, 
+					"Please set a variable path at MainActivity.java(请设置播放源)", Toast.LENGTH_LONG).show();
+			return ;
+		}
+			Uri uri1=Uri.fromFile(new File(path));
+			Intent intent = new Intent(MainActivity.this, VideoEffectActivity.class);
+		     intent.putExtra(VideoPlayerActivity.PLAY_LOCATION, uri1);
+		     intent.putExtra(VideoPlayerActivity.PLAY_IS_SOFTWARE_CODEC, true);
+		     startActivity(intent);
+    }
+    
 }

@@ -30,6 +30,12 @@
         android:text="3D Play Demo"
         android:layout_marginTop="30dip"/>
             
+			<Button 
+        android:id="@+id/id_main_effectdemo_btn"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:text="Video Filter Demo"
+        android:layout_marginTop="30dip"/>
             
          
 </LinearLayout>
