@@ -23,10 +23,15 @@ This is our video SDK player demo, support Soft Codec and hardware Acceleration,
 
 基本播放:
 	1,正常播放, 支持MP4,FLV,AVI,TS,3GP,RMVB,WM,WMV格式视频.
-	2,网络流播放, http,rtsp,rtmp,mms,m3u8
+	
+	2,网络流播放, http,rtsp,rtmp,mms,m3u8.
+	
 	3,软硬解自动切换.完全支持软硬解.并软解功能支持NEON指令,多线程解码.
+	
 	4,读取视频总时间,当前播放时间, 定位指定播放,读取媒体信息,暂停/开始,停止.
+	
 	5,提取视频缩略图.
+	
 	6,提供通用播放器需要的左滑动,右半屏滑动,横向滑动来完成调节亮度/声音/快进的功能.
 高级功能:	
 	1,设置视频下载缓冲器大小,设置视频缓冲时长.
