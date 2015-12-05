@@ -1,3 +1,5 @@
+ 2015-12-05 09:33:08:
+  add some filter and networkspeed.
 2015-11-26 20:38:52:
    update: 
     add some video filter effects.such as: anaglyph/mirror/psychedelic/wave/ripple/motiondetect/invert/posterize/extract/marq/sepia/motionblur	(您可以通过这些API做出类似秒拍, 美拍这样视频播放的效果.)
