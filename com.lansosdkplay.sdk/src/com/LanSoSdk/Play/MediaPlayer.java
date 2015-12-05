@@ -15,10 +15,14 @@ package com.LanSoSdk.Play;
 
 import java.io.File;
 
+import com.LanSoSdk.Play.LibPlay.HardwareAccelerationError;
+
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 import android.view.SurfaceView;
 
@@ -170,7 +174,6 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
     	mLibPlay =new LibPlay();
     	Log.i("MediaPlayer","current LanSoSdkPlay version is:"+mLibPlay.version());
     	mLibPlay.setOnHardwareAccelerationError(this);
-    
     	setNativeCrashListener();
     	nativeNewFromLibPlay(context,mLibPlay, mWindow);	
     	setAudioOutput("android_audiotrack");
@@ -241,6 +244,7 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
     }
 	private onHardwareAccelerationErrorListener mOnHardwareAccelerationErrorListener=null;
 	
+	
 	/**
 	 * * Register a callback to be invoked when the hardware  acceleration Error.
 	 * @param listener
@@ -249,6 +253,22 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
 	{
 		mOnHardwareAccelerationErrorListener=listener;
 	}
+	
+	/**
+	 * 截屏
+	 *
+	 */
+	    public interface onSnapShotCompletedListener {
+	        void snapShotCompleted( byte[] bytes,int width,int height,int bytesPerPixel); 
+	    }
+	    public void setOnSnapShotCompletedListener( onSnapShotCompletedListener listener) {
+	    	nativeSetOnSnapShotCompletedListener(listener);
+	    }
+	    private native void nativeSetOnSnapShotCompletedListener( onSnapShotCompletedListener listener);
+
+	    private native void nativeTriggerSnapShot();  //截屏, 截屏后,会调用snapshot的回调.
+	    
+	
 	
 	
 	public interface onNativeCrashListener {	    
@@ -287,7 +307,11 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
     		mOnHardwareAccelerationErrorListener.eventHardwareAccelerationError();
     	}
     }
-
+    
+    public void triggerSnapShot()
+    {
+    	nativeTriggerSnapShot();
+    }
     /**
      * set surfaceView to display video picture.
      * @param view
@@ -741,7 +765,9 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
      */
     public native long getLength();
 
-
+//------------------------------------------
+    
+  
 
     /* JNI */
     private native void nativeNewFromLibPlay(Context ctx,LibPlay libPlay, IAWindowNativeHandler window);
@@ -810,4 +836,7 @@ public class MediaPlayer extends PlayObject<MediaPlayer.Event> implements LibPla
     public native boolean setHueValue(float value);
     public native boolean setSaturationValue(float value);
     public native boolean setGammaValue(float value);
+    
+
+     
 }

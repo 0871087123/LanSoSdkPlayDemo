@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Build;
+import android.os.Handler;
+import android.os.Looper;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Surface;
@@ -81,12 +83,17 @@ public class LibPlay extends PlayObject<LibPlay.Event> {
         nativeNew(options.toArray(new String[options.size()]));
     }
 
+    /**
+     * 设置当硬件加速错误是的回调.
+     * 
+     * @param error
+     */
     public void setOnHardwareAccelerationError(HardwareAccelerationError error) {
         nativeSetOnHardwareAccelerationError(error);
     }
     private native void nativeSetOnHardwareAccelerationError(HardwareAccelerationError error);
 
-  
+    
     public native String version();
 
     @Override

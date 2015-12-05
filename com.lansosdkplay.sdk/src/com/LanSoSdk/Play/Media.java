@@ -540,6 +540,10 @@ public class Media extends PlayObject<Media.Event> {
      * @param force force hw acceleration even for unknown devices
      */
     public void setHWDecoderEnabled(boolean enabled, boolean force) {
+    	
+    	   addOption(":file-caching=1500");
+           addOption(":network-caching=1500");
+           
         final HWDecoderUtil.Decoder decoder = enabled ?
                 HWDecoderUtil.getDecoderFromDevice() :
                 HWDecoderUtil.Decoder.NONE;
@@ -559,8 +563,7 @@ public class Media extends PlayObject<Media.Event> {
          * for 320x170 H.264, a few packets less on higher resolutions.
          * On Nexus S, the decoder latency seems to be about 7 packets.
          */
-        addOption(":file-caching=1500");
-        addOption(":network-caching=1500");
+     
 
         final StringBuilder sb = new StringBuilder(":codec=");
         if (decoder == HWDecoderUtil.Decoder.MEDIACODEC)

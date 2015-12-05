@@ -127,7 +127,6 @@ abstract class PlayObject<T extends PlayEvent> {
                 listener.onEvent(event);
             }
         }
-
         if (event != null && mEventListener != null && mHandler != null)
             mHandler.post(new EventRunnable(mEventListener, event));
     }
