@@ -2,10 +2,10 @@ LanSoSdkPlayDemo
 ===================================
 
 ###update
-*2015-12-05 09:33:08:
+* 2015-12-05 09:33:08:
   add some filter and networkspeed.
-*2015-11-26 20:38:52:
-    add some video filter effects.such as: *anaglyph/mirror/psychedelic/wave/ripple/motiondetect/invert/posterize/extract/marq/sepia/motionblur	(您可以通过这些API做出类似秒拍, 美拍这样视频播放的效果.)
+* 2015-11-26 20:38:52:
+    add some video filter effects.such as:  anaglyph/mirror/psychedelic/wave/ripple/motiondetect/invert/posterize/extract/marq/sepia/motionblur	(您可以通过这些API做出类似秒拍, 美拍这样视频播放的效果.)
  
 ####our APP download from:我们的APP下载链接(早期版本):
 http://shouji.baidu.com/software/item?docid=8123232&from=as 
@@ -24,9 +24,9 @@ This is our video SDK player demo, support Soft Codec and hardware Acceleration,
 
 有问题, 可联系我们, support@lansongtech.com.
 
-####播放功能列表
+####播放功能列表(free)
 
-基本播放:
+###基本播放:
 	1,正常播放, 支持MP4,FLV,AVI,TS,3GP,RMVB,WM,WMV格式视频.
 	
 	2,网络流播放, http,rtsp,rtmp,mms,m3u8.
@@ -39,7 +39,7 @@ This is our video SDK player demo, support Soft Codec and hardware Acceleration,
 	
 	6,提供通用播放器需要的左滑动,右半屏滑动,横向滑动来完成调节亮度/声音/快进的功能.
 	
-高级功能:	
+####高级功能(no free):	
 	1,设置视频下载缓冲器大小,设置视频缓冲时长.
 	
 	2,视频截屏,单帧播放.
