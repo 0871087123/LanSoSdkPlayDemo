@@ -1,8 +1,7 @@
 LanSoSdkPlayDemo
 ===================================
-###最新版本new version (no free, here is only test):
-	http://github.com/LanSoSdk/LanSoSdkPlayDemo_1.8
-1.[点击这里你可以链接到www.google.com](http://www.google.com)<br />
+#最新版本new version (no free, here is only test):
+	[http://github.com/LanSoSdk/LanSoSdkPlayDemo_1.8](http://github.com/LanSoSdk/LanSoSdkPlayDemo_1.8)<br />
 ###update
 * 2015-12-05 09:33:08:
   add some filter and networkspeed.
