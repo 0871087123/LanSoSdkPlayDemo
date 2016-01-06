@@ -1,7 +1,8 @@
 LanSoSdkPlayDemo
 ===================================
 ###new version (no free, here is only test):
-	[LansoSdkPlayDemo_1.8](https://github.com/LanSoSdk/LanSoSdkPlayDemo_1.8)
+	[LansoSdkPlayDemo_1.8] (https://github.com/LanSoSdk/LanSoSdkPlayDemo_1.8)
+		
 ###update
 * 2015-12-05 09:33:08:
   add some filter and networkspeed.
