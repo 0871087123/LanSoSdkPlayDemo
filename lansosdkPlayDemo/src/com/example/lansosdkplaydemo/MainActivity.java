@@ -19,9 +19,12 @@ import com.example.lansosdk.util.snoCrashHandler;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -43,13 +46,19 @@ public class MainActivity extends Activity implements OnClickListener {
 		 Thread.setDefaultUncaughtExceptionHandler(new snoCrashHandler());
         setContentView(R.layout.activity_main);
     
-        path = "/storage/sdcard1/chongchukabuer.mp4";
     	findViewById(R.id.id_main_allcodec_btn).setOnClickListener(this);
     	findViewById(R.id.id_main_software_btn).setOnClickListener(this);
     	findViewById(R.id.id_main_3ddemo_btn).setOnClickListener(this);
     	findViewById(R.id.id_main_effectdemo_btn).setOnClickListener(this);
-        
     	
+    	new Handler().postDelayed(new Runnable() {
+			
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				showHint();
+			}
+		}, 2000);
     }
     @Override
     public void onClick(View v) {
@@ -72,12 +81,28 @@ public class MainActivity extends Activity implements OnClickListener {
 			break;
 		}
     }
+    private void showHint()
+	{
+		new AlertDialog.Builder(this)
+		.setTitle(R.string.hint)
+		.setMessage(R.string.no_free_hint)
+        .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener()
+        {
+            
+            @Override
+            public void onClick(DialogInterface dialog, int which)
+            {
+            	
+            }
+        })
+        .show();
+	}
     
     private void playFullCodecDemo()
     {
     	if (path == "") {
 			Toast.makeText(MainActivity.this, 
-					"Please set a variable path at MainActivity.java(请设置播放源)", Toast.LENGTH_LONG).show();
+					R.string.set_video_source, Toast.LENGTH_LONG).show();
 			return ;
 		}
 		Uri uri1=Uri.fromFile(new File(path));
@@ -91,8 +116,8 @@ public class MainActivity extends Activity implements OnClickListener {
     private void playSoftWareDemo()
     {
     	if (path == "") {
-			Toast.makeText(MainActivity.this, 
-					"Please set a variable path at MainActivity.java(请设置播放源)", Toast.LENGTH_LONG).show();
+    		Toast.makeText(MainActivity.this, 
+					R.string.set_video_source, Toast.LENGTH_LONG).show();
 			return ;
 		}
 		Uri uri1=Uri.fromFile(new File(path));
@@ -105,8 +130,8 @@ public class MainActivity extends Activity implements OnClickListener {
     private void play3DDemo()
     {
     	if (path == "") {
-			Toast.makeText(MainActivity.this, 
-					"Please set a variable path at MainActivity.java(请设置播放源)", Toast.LENGTH_LONG).show();
+    		Toast.makeText(MainActivity.this, 
+					R.string.set_video_source, Toast.LENGTH_LONG).show();
 			return ;
 		}
 			Uri uri1=Uri.fromFile(new File(path));
@@ -118,8 +143,8 @@ public class MainActivity extends Activity implements OnClickListener {
     private void playVideoEffect()
     {
     	if (path == "") {
-			Toast.makeText(MainActivity.this, 
-					"Please set a variable path at MainActivity.java(请设置播放源)", Toast.LENGTH_LONG).show();
+    		Toast.makeText(MainActivity.this, 
+					R.string.set_video_source, Toast.LENGTH_LONG).show();
 			return ;
 		}
 			Uri uri1=Uri.fromFile(new File(path));

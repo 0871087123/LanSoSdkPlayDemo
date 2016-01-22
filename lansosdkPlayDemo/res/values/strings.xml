@@ -33,5 +33,7 @@
 	<string name="about_this_app_text">把普通的视频, 转换为红蓝3D或左右屏3D形式来播放.\n其中红蓝3D,需要您带上红蓝3D眼镜才显示正常效果.\n左右屏3D, 是需要带网上买的很多的3D头戴式眼镜,比如谷歌的cardboard眼镜,魔镜等才可以看到3D效果.</string>
 	
 	<string name="lansosdk_publish">LanSoSdk提供</string>
-    
+	<string name="no_free_hint">the project is only used to Demonstrate,Advanced features are not free and only runing on this.\n(工程仅仅是演示,高级功能不免费,只能运行)</string>
+    <string name="hint">Hint(提示)</string>
+    <string name="set_video_source">Please set a variable path at MainActivity.java(请设置播放源)</string>
 </resources>

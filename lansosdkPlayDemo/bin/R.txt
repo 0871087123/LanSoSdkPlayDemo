@@ -205,8 +205,11 @@ int string brightness 0x7f04000f
 int string current_lansosdk_version 0x7f040011
 int string current_ui_version 0x7f040010
 int string hello_world 0x7f040001
+int string hint 0x7f04001a
 int string lansosdk_publish 0x7f040018
 int string locked 0x7f040009
+int string no_free_hint 0x7f040019
+int string set_video_source 0x7f04001b
 int string sound_off 0x7f04000e
 int string sound_on 0x7f04000d
 int string surface_best_fit 0x7f040004
