@@ -1,39 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">lansosdkPlayDemo</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-
-    
-   <string name="back_quit_lock">再次按下“返回”可退出视频播放</string>
-     <string name="surface_best_fit">最为合适</string>
-    <string name="surface_fit_horizontal">水平匹配</string>
-    <string name="surface_fit_vertical">垂直匹配</string>
-    <string name="surface_fill">拉伸填充</string>
-    <string name="surface_original">居中</string>
-    <string name="locked">已锁定</string>
-    <string name="unlocked">已解锁</string>
-    <string name="unseekable_stream">播放时不支持定位的流</string>
-    <string name="volume">音量</string>
-    <string name="sound_on">声音开启</string>
-    <string name="sound_off">声音关闭</string>
-    <string name="brightness">亮度</string>
+    <string name="app_name">视频播放测试</string>
+         <string name="message_granted">All permissions have been granted.</string>
+    <string name="message_denied">Permission \"%1$s\" has been denied.</string>
     
     
-    <string name="current_ui_version">当前版本:</string>    
-    <string name="current_lansosdk_version">LanSoSdkPlay版本:</string>    
-    <string name="about_us">关于我们::</string>    
-    <string name="about_us_text">提供android/ios移动平台的视频编解码,录制/播放等相关的多媒体开发和定制.提供的SDK均是调用简单,功能强大,稳定可靠.采用基本功能免费, 公司定制功能收费的盈利模式,欢迎和我们联系.support@lansongtech.com</string>
-    
-    <string name="about_lansosdkplay">关于LanSoSdkPlay:</string>
-    <string name="about_lansosdkplay_text">这个是我们的LanSoSdk中的播放套件, 提供视频播放功能, 全面支持软解和硬解,支持速率可调,支持音频可调,支持3D播放等功能.\n演示版本可以从这里下载:https://github.com/LanSoSdk/LanSoSdkPlayDemo,欢迎使用.</string>
-    
-	<string name="about_this_app">关于本软件:</string>	
-	<string name="about_this_app_text">把普通的视频, 转换为红蓝3D或左右屏3D形式来播放.\n其中红蓝3D,需要您带上红蓝3D眼镜才显示正常效果.\n左右屏3D, 是需要带网上买的很多的3D头戴式眼镜,比如谷歌的cardboard眼镜,魔镜等才可以看到3D效果.</string>
+    <string name="lansong_hint">杭州蓝松科技有限公司\n   专业的视频处理SDK开发团队.</string>
+	<string name="sdk_limit">当前SDK是我们视频播放版本,版本号:\"%1$s\" [商用版本]\n\n 欢迎您的测试评估.</string>
+	<string name="sdk_limit2">此演示demo，我们在SDK底层做了授权限制，有效时间为 \"%1$d\"年 \"%2$d\"月之前。请注意\n为了您更好的使用,希望您和我们合作取得授权后，永久使用。</string>
 	
-	<string name="lansosdk_publish">LanSoSdk提供</string>
-	<string name="no_free_hint">the project is only used to Demonstrate,Advanced features are not free and only runing on this.\n(工程仅仅是演示,高级功能不免费,只能运行)</string>
-    <string name="hint">Hint(提示)</string>
-    <string name="set_video_source">Please set a variable path at MainActivity.java(请设置播放源)</string>
+	
+	<string name="sdk_version">当前SDK是我们视频播放版本,版本号:\"%1$s\"，有效时间为 \"%2$d\"年 \"%3$d\"月之前。请注意\n。</string>
+	
+	
+	
+	<string name="file_not_exist">文件不存在</string>
+	<string name="videoplay_hint">视频小知识:\n当前是等比例的显示到屏幕上, 目的是保持视频的宽高比一致,视频不变形;\n\n 或许会导致分辨率小的画面被放大了,画面质量下降,这是正常情况,只是播放的界面事情,不影响视频本身</string>
+	
+	
+	<string name="videoplayer_function">自动识别软硬解,优先硬解播放;\n 前后台无缝切换;\n暂定,播放,进度条等常规播放器功能见VideoPlayer.java文件</string>
+		    
+	<string name="connect_us">联系我们:\n 杭州蓝松科技有限公司\n专业的视频处理SDK开发团队。\n 电话:0571-89052701 \n QQ:\t 1852600324 \n email:\tsupport@lansongtech.com \n 地址:\t杭州市余杭区运通网城软件园6栋428室.</string>
 </resources>

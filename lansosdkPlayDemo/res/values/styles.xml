@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -18,38 +18,52 @@
     </style>
 
     
-    	<style name="adjustItemLayoutStyle">
-    	    <item name="android:layout_width">match_parent</item>
-    	    <item name="android:layout_height">wrap_content</item>
-    	    <item name="android:gravity">center_vertical</item>
-    	    <item name="android:orientation">horizontal</item>
-    	    <item name="android:layout_marginLeft">25dip</item>
-    	    <item name="android:layout_marginRight">25dip</item>
-    	    <item name="android:layout_marginBottom">10dip</item>
-    	            
-    	</style>
     
-      <style name="adjustItemTextStyle">
-      	  <item name="android:layout_width">wrap_content</item>
-	      <item name="android:layout_height">wrap_content</item>
-      	  <item name="android:textColor">@color/white</item>
-      	  <item name="android:textSize">16sp</item>
-      	  <item name="android:textStyle">bold</item>
-      	  <item name="android:layout_marginRight">10dip</item>
+    
+    <style name="main_item_reletivelayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">60dip</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginTop">20dip</item>
+        <item name="android:background">@color/white</item>
     </style>
     
-      <style name="adjustItemSeekbarStyle">
-            <item name="android:layout_width">match_parent</item>
-            <item name="android:layout_height">wrap_content</item>
-            <item name="android:maxHeight">@dimen/seekbar_height</item>
-            <item name="android:minHeight">@dimen/seekbar_height</item>
-            <item name="android:paddingLeft">@dimen/time_margin_sides</item>
-            <item name="android:paddingRight">@dimen/time_margin_sides</item>
-            <item name="android:paddingTop">4dp</item>
-            <item name="android:paddingBottom">4dp</item>
-            <item name="android:progressDrawable">@drawable/po_seekbar</item>
-            <item name="android:thumb">@drawable/seekbar_thumb</item>
-            <item name="android:focusable">true</item>
-      </style>
+      <style name="main_item_linearlayout">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_marginLeft">10dip</item>
+    </style>
+    
+         <style name="main_item_textview1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">10dip</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textSize">20sp</item>
+    </style>
       
+    <style name="main_item_textview2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/gray</item>
+    </style>	   
+           	  
+     <style name="main_item_arrow">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_marginRight">20dip</item>
+        <item name="android:background">@drawable/right_arrow</item>
+    </style>
+    
+     
+      <style name="dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:textSize">25sp</item>
+    </style>
+    
+      	   
 </resources>

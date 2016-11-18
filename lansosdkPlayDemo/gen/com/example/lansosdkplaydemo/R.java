@@ -9,552 +9,522 @@ package com.example.lansosdkplaydemo;
 
 public final class R {
     public static final class attr {
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int bar_length=0x7f01001a;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int bar_orientation_horizontal=0x7f01001d;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int bar_pointer_halo_radius=0x7f01001c;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int bar_pointer_radius=0x7f01001b;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int bar_thickness=0x7f010019;
-        /**  ====================CustomImageView============ 
-         <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int borderRadius=0x7f010020;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int border_color=0x7f010024;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int border_width=0x7f010023;
-        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int cb_color=0x7f01001e;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int cb_pressedRingWidth=0x7f01001f;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int circle_color=0x7f010037;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int circle_fill=0x7f01003f;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int circle_progress_color=0x7f010038;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int circle_stroke_width=0x7f010033;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int circle_x_radius=0x7f010031;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int circle_y_radius=0x7f010032;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int closeOnTapEnabled=0x7f010027;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int color_center_halo_radius=0x7f010016;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int color_center_radius=0x7f010015;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int color_pointer_halo_radius=0x7f010018;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int color_pointer_radius=0x7f010017;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int color_wheel_radius=0x7f010013;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int color_wheel_thickness=0x7f010014;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int end_angle=0x7f01003e;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int lock_enabled=0x7f010030;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int maintain_equal_circle=0x7f01002e;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int max=0x7f01002c;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int move_outside_circle=0x7f01002d;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int offsetWidth=0x7f010029;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int openOnTapEnabled=0x7f010028;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int pointer_alpha_ontouch=0x7f01003c;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int pointer_color=0x7f010039;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int pointer_halo_border_width=0x7f010036;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int pointer_halo_color=0x7f01003a;
-        /** <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int pointer_halo_color_ontouch=0x7f01003b;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int pointer_halo_width=0x7f010035;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int pointer_radius=0x7f010034;
-        /** <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int progress=0x7f01002b;
-        /**  BELOW HERE ARE DEPRECEATED. DO NOT USE. 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static final int ptrAdapterViewBackground=0x7f010010;
-        /**  Style of Animation should be used displayed when pulling. 
-         <p>Must be one or more (separated by '|') of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>rotate</code></td><td>0x0</td><td></td></tr>
-<tr><td><code>flip</code></td><td>0x1</td><td></td></tr>
-</table>
-         */
-        public static final int ptrAnimationStyle=0x7f01000c;
-        /**  Drawable to use as Loading Indicator. Changes both Header and Footer. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int ptrDrawable=0x7f010006;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int ptrDrawableBottom=0x7f010012;
-        /**  Drawable to use as Loading Indicator in the Footer View. Overrides value set in ptrDrawable. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int ptrDrawableEnd=0x7f010008;
-        /**  Drawable to use as Loading Indicator in the Header View. Overrides value set in ptrDrawable. 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int ptrDrawableStart=0x7f010007;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int ptrDrawableTop=0x7f010011;
-        /**  A drawable to use as the background of the Header and Footer Loading Views 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static final int ptrHeaderBackground=0x7f010001;
-        /**  Text Color of the Header and Footer Loading Views Sub Header 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static final int ptrHeaderSubTextColor=0x7f010003;
-        /**  Base text color, typeface, size, and style for Header and Footer Loading Views 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int ptrHeaderTextAppearance=0x7f01000a;
-        /**  Text Color of the Header and Footer Loading Views 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static final int ptrHeaderTextColor=0x7f010002;
-        /** 
-        	Whether PullToRefreshListView has it's extras enabled. This allows the user to be 
-        	able to scroll while refreshing, and behaves better. It acheives this by adding
-        	Header and/or Footer Views to the ListView.
-        
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-         */
-        public static final int ptrListViewExtrasEnabled=0x7f01000e;
-        /**  Mode of Pull-to-Refresh that should be used 
-         <p>Must be one or more (separated by '|') of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>disabled</code></td><td>0x0</td><td></td></tr>
-<tr><td><code>pullFromStart</code></td><td>0x1</td><td></td></tr>
-<tr><td><code>pullFromEnd</code></td><td>0x2</td><td></td></tr>
-<tr><td><code>both</code></td><td>0x3</td><td></td></tr>
-<tr><td><code>manualOnly</code></td><td>0x4</td><td></td></tr>
-<tr><td><code>pullDownFromTop</code></td><td>0x1</td><td> These last two are depreacted </td></tr>
-<tr><td><code>pullUpFromBottom</code></td><td>0x2</td><td></td></tr>
-</table>
-         */
-        public static final int ptrMode=0x7f010004;
-        /**  Whether Android's built-in Over Scroll should be utilised for Pull-to-Refresh. 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-         */
-        public static final int ptrOverScroll=0x7f010009;
-        /**  A drawable to use as the background of the Refreshable View 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-         */
-        public static final int ptrRefreshableViewBackground=0x7f010000;
-        /** 
-        	Whether the Drawable should be continually rotated as you pull. This only
-        	takes effect when using the 'Rotate' Animation Style.
-        
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-         */
-        public static final int ptrRotateDrawableWhilePulling=0x7f01000f;
-        /**  Whether the user can scroll while the View is Refreshing 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-         */
-        public static final int ptrScrollingWhileRefreshingEnabled=0x7f01000d;
-        /**  Whether the Indicator overlay(s) should be used 
-         <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-         */
-        public static final int ptrShowIndicator=0x7f010005;
-        /**  Base text color, typeface, size, and style for Header and Footer Loading Views Sub Header 
-         <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int ptrSubHeaderTextAppearance=0x7f01000b;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int shadowDrawable=0x7f010025;
-        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int shadowWidth=0x7f010026;
-        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-         */
-        public static final int src=0x7f010022;
-        /** <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int start_angle=0x7f01003d;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>auto</code></td><td>0</td><td></td></tr>
-<tr><td><code>right</code></td><td>-1</td><td></td></tr>
-<tr><td><code>left</code></td><td>-2</td><td></td></tr>
-<tr><td><code>middle</code></td><td>-3</td><td></td></tr>
-<tr><td><code>top</code></td><td>-4</td><td></td></tr>
-<tr><td><code>bottom</code></td><td>-5</td><td></td></tr>
-</table>
-         */
-        public static final int stickTo=0x7f01002a;
-        /** <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>circle</code></td><td>0</td><td></td></tr>
-<tr><td><code>round</code></td><td>1</td><td></td></tr>
-</table>
-         */
-        public static final int type=0x7f010021;
-        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-         */
-        public static final int use_custom_radii=0x7f01002f;
     }
     public static final class color {
-        public static final int black=0x7f060000;
-        public static final int blacktransparent=0x7f060006;
-        public static final int grey400transparent=0x7f060003;
-        public static final int grey50transparent=0x7f060002;
-        public static final int grey900transparent=0x7f060004;
-        public static final int orange500transparent=0x7f060005;
-        public static final int white=0x7f060001;
-        public static final int whitetransparent=0x7f060007;
+        /** 蜜色 
+         */
+        public static final int aliceblue=0x7f040061;
+        /** 亚麻色 
+         */
+        public static final int antiquewhite=0x7f040059;
+        /** 中灰兰色 
+         */
+        public static final int aqua=0x7f0400af;
+        /** 粟色 
+         */
+        public static final int aquamarine=0x7f040093;
+        /** 烟白色 -适合作为底色======
+         */
+        public static final int beige=0x7f04005e;
+        /** 浅玫瑰色 
+         */
+        public static final int bisque=0x7f040046;
+        /** 海军色 
+         */
+        public static final int black=0x7f0400be;
+        public static final int black_overlay=0x7f040000;
+        /** 番木色 
+         */
+        public static final int blanchedalmond=0x7f040044;
+        /** 暗绿色 
+         */
+        public static final int blue=0x7f0400ba;
+        public static final int blue115=0x7f04000e;
+        /**  深蓝色 稍微亮一点的 
+         */
+        public static final int blue150=0x7f04000f;
+        public static final int blue200=0x7f04000c;
+        /**  亮蓝色
+         */
+        public static final int blue90=0x7f04000d;
+        public static final int blue_gray=0x7f040010;
+        /** 紫罗兰蓝色  
+         */
+        public static final int bluelightsky=0x7f040012;
+        /**  灰蓝色 
+         */
+        public static final int blueviolet=0x7f040011;
+        /** 暗灰色 
+         */
+        public static final int brown=0x7f040084;
+        /** 亮青色 
+         */
+        public static final int burlywood=0x7f040069;
+        /** 菊兰色 
+         */
+        public static final int cadetblue=0x7f04009e;
+        /** 碧绿色 
+         */
+        public static final int chartreuse=0x7f040094;
+        /** 茶色 
+         */
+        public static final int chocolate=0x7f040074;
+        public static final int color_pad_layout_bg=0x7f04000b;
+        /** 暗桔黄色 
+         */
+        public static final int coral=0x7f040050;
+        /** 中绿色
+         */
+        public static final int cornflowerblue=0x7f04009d;
+        /** 柠檬绸色 
+         */
+        public static final int cornsilk=0x7f040040;
+        /** 淡灰色 
+         */
+        public static final int crimson=0x7f04006c;
+        /** 浅绿色 
+         */
+        public static final int cyan=0x7f0400b0;
+        /** 中兰色 
+         */
+        public static final int darkblue=0x7f0400bc;
+        /** 深天蓝色 
+         */
+        public static final int darkcyan=0x7f0400b6;
+        /** 中粉紫色 
+         */
+        public static final int darkgoldenrod=0x7f04007c;
+        /** 亮蓝色 
+         */
+        public static final int darkgray=0x7f040083;
+        /** 绿色 
+         */
+        public static final int darkgreen=0x7f0400b9;
+        /** 银色 
+         */
+        public static final int darkkhaki=0x7f040079;
+        /** 重褐色 
+         */
+        public static final int darkmagenta=0x7f04008d;
+        /** 军兰色 
+         */
+        public static final int darkolivegreen=0x7f04009f;
+        /** 亮肉色 
+ ============================================================================== 
+         */
+        public static final int darkorange=0x7f04004f;
+        /** 赭色 
+         */
+        public static final int darkorchid=0x7f040086;
+        /** 暗洋红 
+         */
+        public static final int darkred=0x7f04008e;
+        /** 紫罗兰色 
+         */
+        public static final int darksalmon=0x7f040066;
+        /** 亮绿色 
+         */
+        public static final int darkseagreen=0x7f04008b;
+        /** 中绿宝石
+         */
+        public static final int darkslateblue=0x7f0400a2;
+        /** 橙绿色 
+         */
+        public static final int darkslategray=0x7f0400a8;
+        /** 暗瓦灰色 
+         */
+        public static final int darkslategrey=0x7f0400a9;
+        /** 中春绿色 
+         */
+        public static final int darkturquoise=0x7f0400b4;
+        /** 苍绿色 
+         */
+        public static final int darkviolet=0x7f040088;
+        /** 西红柿色 
+         */
+        public static final int deeppink=0x7f040053;
+        /** 暗宝石绿 
+         */
+        public static final int deepskyblue=0x7f0400b5;
+        /** 石蓝色 
+         */
+        public static final int dimgray=0x7f04009a;
+        /** 暗灰色 
+         */
+        public static final int dimgrey=0x7f04009b;
+        /** 亮海蓝色 
+         */
+        public static final int dodgerblue=0x7f0400ad;
+        public static final int elv_btn_focused=0x7f0400c0;
+        public static final int elv_btn_normal=0x7f0400c1;
+        /** 黑色 
+         */
+        public static final int elv_btn_pressed=0x7f0400bf;
+        public static final int elv_popup_bg_color=0x7f0400c2;
+        public static final int elv_separator_color=0x7f0400c3;
+        public static final int esp_actionbar_color=0x7f040001;
+        public static final int esp_actionbar_split_color=0x7f040002;
+        public static final int esp_help_frame_background_dark=0x7f040009;
+        public static final int esp_help_hint_message_frame_bg=0x7f04000a;
+        public static final int esp_qrcode_possible_result_points=0x7f040008;
+        public static final int esp_qrcode_result_view=0x7f040007;
+        public static final int esp_qrcode_viewfinder_frame=0x7f040005;
+        public static final int esp_qrcode_viewfinder_laser=0x7f040006;
+        public static final int esp_qrcode_viewfinder_mask=0x7f040004;
+        public static final int esp_text_hint_color=0x7f040003;
+        /** 暗金黄色 
+         */
+        public static final int firebrick=0x7f04007d;
+        /** 雪白色 
+         */
+        public static final int floralwhite=0x7f04003e;
+        /** 海绿色 
+         */
+        public static final int forestgreen=0x7f0400ab;
+        /** 深粉红色 
+         */
+        public static final int fuchsia=0x7f040054;
+        /** 洋李色 
+         */
+        public static final int gainsboro=0x7f04006b;
+        /** 鲜肉色 
+         */
+        public static final int ghostwhite=0x7f04005b;
+        /** 桃色 
+         */
+        public static final int gold=0x7f04004a;
+        /** 苍紫罗兰色
+         */
+        public static final int goldenrod=0x7f04006e;
+        /** 暗红色 
+         */
+        public static final int gray=0x7f04008f;
+        /** 水鸭色 
+         */
+        public static final int green=0x7f0400b8;
+        /** 苍宝石绿 
+         */
+        public static final int greenyellow=0x7f040081;
+        public static final int grey100=0x7f040023;
+        public static final int grey200=0x7f040024;
+        public static final int grey300=0x7f040025;
+        public static final int grey400=0x7f040026;
+        public static final int grey400transparent=0x7f04002f;
+        public static final int grey50=0x7f040022;
+        public static final int grey500=0x7f040027;
+        public static final int grey50transparent=0x7f04002e;
+        public static final int grey600=0x7f040028;
+        public static final int grey700=0x7f040029;
+        public static final int grey800=0x7f04002a;
+        public static final int grey850=0x7f04002b;
+        public static final int grey875=0x7f04002c;
+        public static final int grey900=0x7f04002d;
+        public static final int grey900transparent=0x7f040030;
+        /** 沙褐色 
+         */
+        public static final int honeydew=0x7f040060;
+        /** 珊瑚色 
+         */
+        public static final int hotpink=0x7f040051;
+        /** 秘鲁色 
+         */
+        public static final int indianred=0x7f040076;
+        /** 暗橄榄绿 
+         */
+        public static final int indigo=0x7f0400a0;
+        public static final int ivory=0x7f04003a;
+        /** 艾利斯兰 
+         */
+        public static final int khaki=0x7f040062;
+        /** 暗肉色 
+         */
+        public static final int lavender=0x7f040067;
+        /** 海贝色 
+         */
+        public static final int lavenderblush=0x7f040042;
+        /** 黄绿色 
+         */
+        public static final int lawngreen=0x7f040095;
+        /** 亮蓝灰 
+         */
+        public static final int layout_title_color=0x7f040016;
+        /** 花白色 
+         */
+        public static final int lemonchiffon=0x7f04003f;
+        /** 白色 
+         */
+        public static final int light_grey=0x7f040037;
+        /** 黄绿色 
+         */
+        public static final int lightblue=0x7f040082;
+        /** 黄褐色 
+         */
+        public static final int lightcoral=0x7f040063;
+        /** 淡紫色 
+         */
+        public static final int lightcyan=0x7f040068;
+        /** 老花色 
+         */
+        public static final int lightgoldenrodyellow=0x7f040057;
+        /** 蓟色 
+         */
+        public static final int lightgray=0x7f040071;
+        /** 中紫色 
+         */
+        public static final int lightgreen=0x7f04008a;
+        /** 亮灰色 
+         */
+        public static final int lightgrey=0x7f040072;
+        /** 粉红色 
+         */
+        public static final int lightpink=0x7f04004c;
+        /** 橙色 
+         */
+        public static final int lightsalmon=0x7f04004e;
+        /** 森林绿 
+         */
+        public static final int lightseagreen=0x7f0400ac;
+        /** 中暗蓝色
+         */
+        public static final int lightslategray=0x7f040015;
+        /** 粉蓝色 
+         */
+        public static final int lightsteelblue=0x7f04007f;
+        /** 象牙色 
+         */
+        public static final int lightyellow=0x7f04003b;
+        /** 春绿色 
+         */
+        public static final int lime=0x7f0400b2;
+        /** 中海蓝 
+         */
+        public static final int limegreen=0x7f0400a7;
+        /** 亮金黄色 
+         */
+        public static final int linen=0x7f040058;
+        /** 紫红色 
+         */
+        public static final int magenta=0x7f040055;
+        /** 紫色 
+         */
+        public static final int maroon=0x7f040092;
+        /** 暗灰色 
+         */
+        public static final int mediumaquamarine=0x7f04009c;
+        /** 蓝色 
+         */
+        public static final int mediumblue=0x7f0400bb;
+        /** 褐玫瑰红 
+         */
+        public static final int mediumorchid=0x7f04007b;
+        /** 暗紫罗兰色 
+         */
+        public static final int mediumpurple=0x7f040089;
+        /** 青绿色 
+         */
+        public static final int mediumseagreen=0x7f0400a6;
+        /** 天蓝色不太好,有点淡 
+         */
+        public static final int mediumslateblue=0x7f040014;
+        /** 酸橙色 
+         */
+        public static final int mediumspringgreen=0x7f0400b3;
+        /** 靛青色 
+         */
+        public static final int mediumturquoise=0x7f0400a1;
+        /** 印第安红 
+         */
+        public static final int mediumvioletred=0x7f040077;
+        /** 闪兰色 
+         */
+        public static final int midnightblue=0x7f0400ae;
+        /** 幽灵白 
+         */
+        public static final int mintcream=0x7f04005c;
+        /** 白杏色 
+         */
+        public static final int mistyrose=0x7f040045;
+        /** 桔黄色 
+         */
+        public static final int moccasin=0x7f040047;
+        /** 鹿皮色 
+         */
+        public static final int navajowhite=0x7f040048;
+        /** 暗蓝色 
+         */
+        public static final int navy=0x7f0400bd;
+        /** 红紫色 
+         */
+        public static final int oldlace=0x7f040056;
+        /** 灰色 
+         */
+        public static final int olive=0x7f040090;
+        /** 灰石色 
+         */
+        public static final int olivedrab=0x7f040098;
+        /** 亮粉红色 
+         */
+        public static final int orange=0x7f04004d;
+        public static final int orange100=0x7f040018;
+        public static final int orange200=0x7f040019;
+        public static final int orange300=0x7f04001a;
+        public static final int orange400=0x7f04001b;
+        /**  
+    
+    颜色采用 红蓝相间, 亮爽快的界面
+    深蓝色:
+R10 G42, B115
+#0a2a73
+
+更深蓝一些:
+R9, G52, B149
+
+#093495
+
+浅灰色(适合文字的显示)
+
+R35 B50,G71
+#233247
+
+     
+         */
+        public static final int orange50=0x7f040017;
+        public static final int orange500=0x7f04001c;
+        public static final int orange500transparent=0x7f040021;
+        public static final int orange600=0x7f04001d;
+        public static final int orange700=0x7f04001e;
+        public static final int orange800=0x7f04001f;
+        public static final int orange900=0x7f040020;
+        /** 半透明红色 
+         */
+        public static final int orangered=0x7f040033;
+        /** 金麒麟色 
+         */
+        public static final int orchid=0x7f04006f;
+        /** 亮珊瑚色 
+         */
+        public static final int palegoldenrod=0x7f040064;
+        /** 暗紫色 
+         */
+        public static final int palegreen=0x7f040087;
+        /** 亮钢兰色
+         */
+        public static final int paleturquoise=0x7f040080;
+        /** 暗深红色 
+         */
+        public static final int palevioletred=0x7f04006d;
+        /** 淡紫红 
+         */
+        public static final int papayawhip=0x7f040043;
+        /** 纳瓦白 
+         */
+        public static final int peachpuff=0x7f040049;
+        /** 巧可力色 
+         */
+        public static final int peru=0x7f040075;
+        /** 金色 
+         */
+        public static final int pink=0x7f04004b;
+        public static final int plug_layout_background_color=0x7f040035;
+        /** 红橙色 
+         */
+        public static final int plug_titlebar_color=0x7f040034;
+        /** 实木色 
+         */
+        public static final int plum=0x7f04006a;
+        /** 火砖色 
+         */
+        public static final int powderblue=0x7f04007e;
+        /** 橄榄色 
+         */
+        public static final int purple=0x7f040091;
+        /**  =====================红色================= 
+         */
+        public static final int red=0x7f040031;
+        /** 红色 
+         */
+        public static final int red_half=0x7f040032;
+        /** 暗黄褐色  
+         */
+        public static final int rosybrown=0x7f04007a;
+        /** 钢兰色 
+         */
+        public static final int royalblue=0x7f0400a4;
+        /** 暗海兰色 
+         */
+        public static final int saddlebrown=0x7f04008c;
+        /** 古董白 
+         */
+        public static final int salmon=0x7f04005a;
+        /** 米色 
+         */
+        public static final int sandybrown=0x7f04005f;
+        /** 暗瓦灰色 
+         */
+        public static final int seagreen=0x7f0400aa;
+        /** 米绸色 
+         */
+        public static final int seashell=0x7f040041;
+        /** 褐色 
+         */
+        public static final int sienna=0x7f040085;
+        /** 中紫罗兰色 
+         */
+        public static final int silver=0x7f040078;
+        /** 亮天蓝色 
+         */
+        public static final int skyblue=0x7f040013;
+        /** 深绿褐色 
+         */
+        public static final int slateblue=0x7f040099;
+        /** 草绿色 
+         */
+        public static final int slategray=0x7f040096;
+        /** 灰石色 
+         */
+        public static final int slategrey=0x7f040097;
+        /** 黄色 
+         */
+        public static final int snow=0x7f04003d;
+        /** 青色 
+         */
+        public static final int springgreen=0x7f0400b1;
+        /** 暗灰蓝色 
+         */
+        public static final int steelblue=0x7f0400a3;
+        /** 亮灰色 
+         */
+        public static final int tan=0x7f040073;
+        /** 暗青色 
+         */
+        public static final int teal=0x7f0400b7;
+        /** 淡紫色 
+         */
+        public static final int thistle=0x7f040070;
+        /** 热粉红色 
+         */
+        public static final int tomato=0x7f040052;
+        /** 皇家蓝 
+         */
+        public static final int turquoise=0x7f0400a5;
+        /** 苍麒麟色 
+         */
+        public static final int violet=0x7f040065;
+        public static final int white=0x7f040036;
+        /**  亮灰色,一般使用在卡片的底色 
+         */
+        public static final int white_40=0x7f040038;
+        /** 40%的亮度, 以前版本微信设置的底色 
+         */
+        public static final int white_half=0x7f040039;
+        /** 薄荷色 
+         */
+        public static final int whitesmoke=0x7f04005d;
+        /** 亮黄色 
+         */
+        public static final int yellow=0x7f04003c;
     }
     public static final class dimen {
-        public static final int actionBarSize=0x7f070014;
         /**  Default screen margins, per the Android Design guidelines. 
 
          Example customization of dimensions originally defined in res/values/dimens.xml
@@ -562,169 +532,63 @@ containing a value of this type.
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f070000;
-        public static final int activity_vertical_margin=0x7f070001;
-        public static final int adv_options_margin=0x7f07000e;
-        public static final int adv_options_music_width=0x7f07000d;
-        public static final int adv_options_video_width=0x7f07000c;
-        /**  Default 
-         */
-        public static final int default_margin=0x7f070012;
-        public static final int dialog_time_picker_width=0x7f07000f;
-        public static final int effect_ckx_height=0x7f070016;
-        public static final int effect_ckx_width=0x7f070015;
-        /**  -1px is fill/match_parent 
-         */
-        public static final int file_picker_height=0x7f070011;
-        public static final int file_picker_width=0x7f070010;
-        public static final int half_default_margin=0x7f070013;
-        public static final int images_margin_sides=0x7f070007;
-        public static final int media_ctrl_margin_top=0x7f070009;
-        public static final int overlay_margin=0x7f070005;
-        public static final int overlay_padding_bottom=0x7f070002;
-        public static final int overlay_padding_sides=0x7f070004;
-        public static final int overlay_padding_top=0x7f070003;
-        public static final int seekbar_height=0x7f070006;
-        public static final int time_margin_sides=0x7f070008;
-        public static final int tv_overscan_horizontal=0x7f07000b;
-        public static final int tv_overscan_vertical=0x7f07000a;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
+        public static final int module_size=0x7f050002;
     }
     public static final class drawable {
-        public static final int arrow_right=0x7f020000;
-        public static final int btn_pause_bg=0x7f020001;
-        public static final int btn_videoedit_bg=0x7f020002;
-        public static final int btn_videoplay_bg=0x7f020003;
-        public static final int btn_videosize_bg=0x7f020004;
-        public static final int chkbox_lock_bg=0x7f020005;
-        public static final int corners_btn_orange_bg=0x7f020006;
-        public static final int device_swich_close=0x7f020007;
-        public static final int device_switch_on=0x7f020008;
-        public static final int effect_chkbox_bg=0x7f020009;
-        public static final int fit_screen_btn_normal=0x7f02000a;
-        public static final int fit_screen_btn_pressed=0x7f02000b;
-        public static final int ic_launcher=0x7f02000c;
-        public static final int ic_pause_circle_normal=0x7f02000d;
-        public static final int ic_play_circle_normal=0x7f02000e;
-        public static final int ic_seekbar_thumb_normal=0x7f02000f;
-        public static final int ic_seekbar_thumb_pressed=0x7f020010;
-        public static final int icon=0x7f020011;
-        public static final int po_seekbar=0x7f020012;
-        public static final int seekbar_thumb=0x7f020013;
-        public static final int video_edit_normal=0x7f020014;
-        public static final int video_edit_pressed=0x7f020015;
-        public static final int video_lockbtn_locked=0x7f020016;
-        public static final int video_lockbtn_unlock=0x7f020017;
-        public static final int video_pause_normal=0x7f020018;
-        public static final int video_pause_pressed=0x7f020019;
-        public static final int video_play_normal=0x7f02001a;
-        public static final int video_play_pressed=0x7f02001b;
+        public static final int button_btn_bg=0x7f020000;
+        public static final int circel_button_bg=0x7f020001;
+        public static final int circle_button_blue_bg=0x7f020002;
+        public static final int function_item_btn_bg=0x7f020003;
+        public static final int ic_launcher=0x7f020004;
+        public static final int ic_menu_archive=0x7f020005;
+        public static final int ic_menu_back=0x7f020006;
+        public static final int ic_menu_block=0x7f020007;
+        public static final int ic_menu_gallery=0x7f020008;
+        public static final int rdobtn_select_bg=0x7f020009;
+        public static final int rect2_button_bg=0x7f02000a;
+        public static final int rect_button_bg=0x7f02000b;
+        public static final int right_arrow=0x7f02000c;
     }
     public static final class id {
-        public static final int action_settings=0x7f09003d;
-        public static final int auto=0x7f09000b;
-        public static final int both=0x7f090000;
-        public static final int bottom=0x7f09000c;
-        public static final int circle=0x7f090009;
-        public static final int disabled=0x7f090001;
-        public static final int flip=0x7f090007;
-        public static final int id_adjust_brightness_seekbar=0x7f09002e;
-        public static final int id_adjust_contrast_seekbar=0x7f09002b;
-        public static final int id_adjust_extract_blue_seekbar=0x7f090035;
-        public static final int id_adjust_extract_green_seekbar=0x7f090034;
-        public static final int id_adjust_extract_red_seekbar=0x7f090033;
-        public static final int id_adjust_gamma_seekbar=0x7f09002f;
-        public static final int id_adjust_hue_seekbar=0x7f09002c;
-        public static final int id_adjust_saturation_seekbar=0x7f09002d;
-        public static final int id_adjust_sepia_seekbar=0x7f090031;
-        public static final int id_adjust_textview=0x7f090029;
-        public static final int id_main_3ddemo_btn=0x7f090013;
-        public static final int id_main_allcodec_btn=0x7f090011;
-        public static final int id_main_effectdemo_btn=0x7f090014;
-        public static final int id_main_software_btn=0x7f090012;
-        public static final int id_play_adjust_adjustenable_ckx=0x7f09002a;
-        public static final int id_play_adjust_extractcolor_ckx=0x7f090032;
-        public static final int id_play_adjust_sepiaenable_ckx=0x7f090030;
-        public static final int id_play_effect_fugu_ckx=0x7f09003a;
-        public static final int id_play_effect_mirror_ckx=0x7f090036;
-        public static final int id_play_effect_motiondetect_ckx=0x7f090039;
-        public static final int id_play_effect_oldmovie_ckx=0x7f09003b;
-        public static final int id_play_effect_palette=0x7f09003c;
-        public static final int id_play_effect_psychedelic_ckx=0x7f090037;
-        public static final int id_play_effect_wave_ckx=0x7f090038;
-        public static final int id_play_slideinlayer_adjust=0x7f090021;
-        public static final int id_play_slideinlayer_effect=0x7f090020;
-        public static final int id_player_editvideo=0x7f09001f;
-        public static final int left=0x7f09000d;
-        public static final int lock_overlay_button=0x7f09001e;
-        public static final int manualOnly=0x7f090002;
-        public static final int middle=0x7f09000e;
-        public static final int player_overlay_buttons=0x7f090026;
-        public static final int player_overlay_info=0x7f09001a;
-        public static final int player_overlay_length=0x7f090025;
-        public static final int player_overlay_play=0x7f090027;
-        public static final int player_overlay_seekbar=0x7f090023;
-        public static final int player_overlay_size=0x7f090028;
-        public static final int player_overlay_textinfo=0x7f09001d;
-        public static final int player_overlay_time=0x7f090024;
-        public static final int player_surface=0x7f090016;
-        public static final int player_surface2=0x7f090019;
-        public static final int player_surface_frame=0x7f090015;
-        public static final int player_surface_frame2=0x7f090018;
-        public static final int progress_overlay=0x7f090022;
-        public static final int pullDownFromTop=0x7f090003;
-        public static final int pullFromEnd=0x7f090004;
-        public static final int pullFromStart=0x7f090005;
-        public static final int pullUpFromBottom=0x7f090006;
-        public static final int right=0x7f09000f;
-        public static final int rotate=0x7f090008;
-        public static final int round=0x7f09000a;
-        public static final int subtitles_surface=0x7f090017;
-        public static final int top=0x7f090010;
-        public static final int verticalbar=0x7f09001b;
-        public static final int verticalbar_progress=0x7f09001c;
+        public static final int id_main_player=0x7f08000d;
+        public static final int id_main_select=0x7f080009;
+        public static final int id_main_select_video=0x7f08000b;
+        public static final int id_main_texthint1=0x7f08000e;
+        public static final int id_main_tvvideo=0x7f08000c;
+        public static final int id_main_use_default_videobtn=0x7f08000a;
+        public static final int id_mediainfo_tv=0x7f080008;
+        public static final int id_player_control_linear=0x7f080001;
+        public static final int id_player_pause=0x7f080003;
+        public static final int id_player_start=0x7f080002;
+        public static final int imageview_rowicon=0x7f080005;
+        public static final int linearlayout_row=0x7f080004;
+        public static final int surface1=0x7f08000f;
+        public static final int textview_path=0x7f080007;
+        public static final int textview_rowtext=0x7f080006;
+        public static final int video_view=0x7f080000;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
-        public static final int play_3d=0x7f030001;
-        public static final int player=0x7f030002;
-        public static final int player_effect=0x7f030003;
-        public static final int player_hud=0x7f030004;
-        public static final int player_hud_effect=0x7f030005;
-        public static final int slide_adjust_layout=0x7f030006;
-        public static final int slide_effect_layout=0x7f030007;
-    }
-    public static final class menu {
-        public static final int main=0x7f080000;
+        public static final int activity_player=0x7f030000;
+        public static final int file_explore_item=0x7f030001;
+        public static final int file_explore_layout=0x7f030002;
+        public static final int mediainfo_layout=0x7f030003;
+        public static final int only_videoplay_main=0x7f030004;
+        public static final int player_layout=0x7f030005;
     }
     public static final class string {
-        public static final int about_lansosdkplay=0x7f040014;
-        public static final int about_lansosdkplay_text=0x7f040015;
-        public static final int about_this_app=0x7f040016;
-        public static final int about_this_app_text=0x7f040017;
-        public static final int about_us=0x7f040012;
-        public static final int about_us_text=0x7f040013;
-        public static final int action_settings=0x7f040002;
-        public static final int app_name=0x7f040000;
-        public static final int back_quit_lock=0x7f040003;
-        public static final int brightness=0x7f04000f;
-        public static final int current_lansosdk_version=0x7f040011;
-        public static final int current_ui_version=0x7f040010;
-        public static final int hello_world=0x7f040001;
-        public static final int hint=0x7f04001a;
-        public static final int lansosdk_publish=0x7f040018;
-        public static final int locked=0x7f040009;
-        public static final int no_free_hint=0x7f040019;
-        public static final int set_video_source=0x7f04001b;
-        public static final int sound_off=0x7f04000e;
-        public static final int sound_on=0x7f04000d;
-        public static final int surface_best_fit=0x7f040004;
-        public static final int surface_fill=0x7f040007;
-        public static final int surface_fit_horizontal=0x7f040005;
-        public static final int surface_fit_vertical=0x7f040006;
-        public static final int surface_original=0x7f040008;
-        public static final int unlocked=0x7f04000a;
-        public static final int unseekable_stream=0x7f04000b;
-        public static final int volume=0x7f04000c;
+        public static final int app_name=0x7f060000;
+        public static final int connect_us=0x7f06000a;
+        public static final int file_not_exist=0x7f060007;
+        public static final int lansong_hint=0x7f060003;
+        public static final int message_denied=0x7f060002;
+        public static final int message_granted=0x7f060001;
+        public static final int sdk_limit=0x7f060004;
+        public static final int sdk_limit2=0x7f060005;
+        public static final int sdk_version=0x7f060006;
+        public static final int videoplay_hint=0x7f060008;
+        public static final int videoplayer_function=0x7f060009;
     }
     public static final class style {
         /** 
@@ -747,1203 +611,17 @@ containing a value of this type.
         res/values-v11/styles.xml on API 14+ devices.
     
  API 14 theme customizations can go here. 
-
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-
-        Base application theme for API 11+. This theme completely replaces
-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
-    
- API 11 theme customizations can go here. 
-
-        Base application theme for API 14+. This theme completely replaces
-        AppBaseTheme from BOTH res/values/styles.xml and
-        res/values-v11/styles.xml on API 14+ devices.
-    
- API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f050000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
- Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f050001;
-        public static final int adjustItemLayoutStyle=0x7f050002;
-        public static final int adjustItemSeekbarStyle=0x7f050004;
-        public static final int adjustItemTextStyle=0x7f050003;
+        public static final int AppTheme=0x7f070001;
+        public static final int dialog=0x7f070007;
+        public static final int main_item_arrow=0x7f070006;
+        public static final int main_item_linearlayout=0x7f070003;
+        public static final int main_item_reletivelayout=0x7f070002;
+        public static final int main_item_textview1=0x7f070004;
+        public static final int main_item_textview2=0x7f070005;
     }
-    public static final class styleable {
-        /** Attributes that can be used with a CircleButton.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CircleButton_cb_color com.example.lansosdkplaydemo:cb_color}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircleButton_cb_pressedRingWidth com.example.lansosdkplaydemo:cb_pressedRingWidth}</code></td><td></td></tr>
-           </table>
-           @see #CircleButton_cb_color
-           @see #CircleButton_cb_pressedRingWidth
-         */
-        public static final int[] CircleButton = {
-            0x7f01001e, 0x7f01001f
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#cb_color}
-          attribute's value can be found in the {@link #CircleButton} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:cb_color
-        */
-        public static final int CircleButton_cb_color = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#cb_pressedRingWidth}
-          attribute's value can be found in the {@link #CircleButton} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:cb_pressedRingWidth
-        */
-        public static final int CircleButton_cb_pressedRingWidth = 1;
-        /**  =========CircleImageViewWithBorder=========== 
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CircleImageViewWithBorder_border_color com.example.lansosdkplaydemo:border_color}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircleImageViewWithBorder_border_width com.example.lansosdkplaydemo:border_width}</code></td><td></td></tr>
-           </table>
-           @see #CircleImageViewWithBorder_border_color
-           @see #CircleImageViewWithBorder_border_width
-         */
-        public static final int[] CircleImageViewWithBorder = {
-            0x7f010023, 0x7f010024
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#border_color}
-          attribute's value can be found in the {@link #CircleImageViewWithBorder} array.
-
-
-          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:border_color
-        */
-        public static final int CircleImageViewWithBorder_border_color = 1;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#border_width}
-          attribute's value can be found in the {@link #CircleImageViewWithBorder} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:border_width
-        */
-        public static final int CircleImageViewWithBorder_border_width = 0;
-        /** Attributes that can be used with a CircularSeekBar.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CircularSeekBar_circle_color com.example.lansosdkplaydemo:circle_color}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_circle_fill com.example.lansosdkplaydemo:circle_fill}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_circle_progress_color com.example.lansosdkplaydemo:circle_progress_color}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_circle_stroke_width com.example.lansosdkplaydemo:circle_stroke_width}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_circle_x_radius com.example.lansosdkplaydemo:circle_x_radius}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_circle_y_radius com.example.lansosdkplaydemo:circle_y_radius}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_end_angle com.example.lansosdkplaydemo:end_angle}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_lock_enabled com.example.lansosdkplaydemo:lock_enabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_maintain_equal_circle com.example.lansosdkplaydemo:maintain_equal_circle}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_max com.example.lansosdkplaydemo:max}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_move_outside_circle com.example.lansosdkplaydemo:move_outside_circle}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_pointer_alpha_ontouch com.example.lansosdkplaydemo:pointer_alpha_ontouch}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_pointer_color com.example.lansosdkplaydemo:pointer_color}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_pointer_halo_border_width com.example.lansosdkplaydemo:pointer_halo_border_width}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_pointer_halo_color com.example.lansosdkplaydemo:pointer_halo_color}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_pointer_halo_color_ontouch com.example.lansosdkplaydemo:pointer_halo_color_ontouch}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_pointer_halo_width com.example.lansosdkplaydemo:pointer_halo_width}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_pointer_radius com.example.lansosdkplaydemo:pointer_radius}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_progress com.example.lansosdkplaydemo:progress}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_start_angle com.example.lansosdkplaydemo:start_angle}</code></td><td></td></tr>
-           <tr><td><code>{@link #CircularSeekBar_use_custom_radii com.example.lansosdkplaydemo:use_custom_radii}</code></td><td></td></tr>
-           </table>
-           @see #CircularSeekBar_circle_color
-           @see #CircularSeekBar_circle_fill
-           @see #CircularSeekBar_circle_progress_color
-           @see #CircularSeekBar_circle_stroke_width
-           @see #CircularSeekBar_circle_x_radius
-           @see #CircularSeekBar_circle_y_radius
-           @see #CircularSeekBar_end_angle
-           @see #CircularSeekBar_lock_enabled
-           @see #CircularSeekBar_maintain_equal_circle
-           @see #CircularSeekBar_max
-           @see #CircularSeekBar_move_outside_circle
-           @see #CircularSeekBar_pointer_alpha_ontouch
-           @see #CircularSeekBar_pointer_color
-           @see #CircularSeekBar_pointer_halo_border_width
-           @see #CircularSeekBar_pointer_halo_color
-           @see #CircularSeekBar_pointer_halo_color_ontouch
-           @see #CircularSeekBar_pointer_halo_width
-           @see #CircularSeekBar_pointer_radius
-           @see #CircularSeekBar_progress
-           @see #CircularSeekBar_start_angle
-           @see #CircularSeekBar_use_custom_radii
-         */
-        public static final int[] CircularSeekBar = {
-            0x7f01002b, 0x7f01002c, 0x7f01002d, 0x7f01002e,
-            0x7f01002f, 0x7f010030, 0x7f010031, 0x7f010032,
-            0x7f010033, 0x7f010034, 0x7f010035, 0x7f010036,
-            0x7f010037, 0x7f010038, 0x7f010039, 0x7f01003a,
-            0x7f01003b, 0x7f01003c, 0x7f01003d, 0x7f01003e,
-            0x7f01003f
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#circle_color}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:circle_color
-        */
-        public static final int CircularSeekBar_circle_color = 12;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#circle_fill}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:circle_fill
-        */
-        public static final int CircularSeekBar_circle_fill = 20;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#circle_progress_color}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:circle_progress_color
-        */
-        public static final int CircularSeekBar_circle_progress_color = 13;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#circle_stroke_width}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:circle_stroke_width
-        */
-        public static final int CircularSeekBar_circle_stroke_width = 8;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#circle_x_radius}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:circle_x_radius
-        */
-        public static final int CircularSeekBar_circle_x_radius = 6;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#circle_y_radius}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:circle_y_radius
-        */
-        public static final int CircularSeekBar_circle_y_radius = 7;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#end_angle}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:end_angle
-        */
-        public static final int CircularSeekBar_end_angle = 19;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#lock_enabled}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:lock_enabled
-        */
-        public static final int CircularSeekBar_lock_enabled = 5;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#maintain_equal_circle}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:maintain_equal_circle
-        */
-        public static final int CircularSeekBar_maintain_equal_circle = 3;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#max}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:max
-        */
-        public static final int CircularSeekBar_max = 1;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#move_outside_circle}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:move_outside_circle
-        */
-        public static final int CircularSeekBar_move_outside_circle = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#pointer_alpha_ontouch}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:pointer_alpha_ontouch
-        */
-        public static final int CircularSeekBar_pointer_alpha_ontouch = 17;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#pointer_color}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:pointer_color
-        */
-        public static final int CircularSeekBar_pointer_color = 14;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#pointer_halo_border_width}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:pointer_halo_border_width
-        */
-        public static final int CircularSeekBar_pointer_halo_border_width = 11;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#pointer_halo_color}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:pointer_halo_color
-        */
-        public static final int CircularSeekBar_pointer_halo_color = 15;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#pointer_halo_color_ontouch}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:pointer_halo_color_ontouch
-        */
-        public static final int CircularSeekBar_pointer_halo_color_ontouch = 16;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#pointer_halo_width}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:pointer_halo_width
-        */
-        public static final int CircularSeekBar_pointer_halo_width = 10;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#pointer_radius}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:pointer_radius
-        */
-        public static final int CircularSeekBar_pointer_radius = 9;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#progress}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be an integer value, such as "<code>100</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:progress
-        */
-        public static final int CircularSeekBar_progress = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#start_angle}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be a floating point value, such as "<code>1.2</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:start_angle
-        */
-        public static final int CircularSeekBar_start_angle = 18;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#use_custom_radii}
-          attribute's value can be found in the {@link #CircularSeekBar} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:use_custom_radii
-        */
-        public static final int CircularSeekBar_use_custom_radii = 4;
-        /** Attributes that can be used with a ColorBars.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ColorBars_bar_length com.example.lansosdkplaydemo:bar_length}</code></td><td></td></tr>
-           <tr><td><code>{@link #ColorBars_bar_orientation_horizontal com.example.lansosdkplaydemo:bar_orientation_horizontal}</code></td><td></td></tr>
-           <tr><td><code>{@link #ColorBars_bar_pointer_halo_radius com.example.lansosdkplaydemo:bar_pointer_halo_radius}</code></td><td></td></tr>
-           <tr><td><code>{@link #ColorBars_bar_pointer_radius com.example.lansosdkplaydemo:bar_pointer_radius}</code></td><td></td></tr>
-           <tr><td><code>{@link #ColorBars_bar_thickness com.example.lansosdkplaydemo:bar_thickness}</code></td><td></td></tr>
-           </table>
-           @see #ColorBars_bar_length
-           @see #ColorBars_bar_orientation_horizontal
-           @see #ColorBars_bar_pointer_halo_radius
-           @see #ColorBars_bar_pointer_radius
-           @see #ColorBars_bar_thickness
-         */
-        public static final int[] ColorBars = {
-            0x7f010019, 0x7f01001a, 0x7f01001b, 0x7f01001c,
-            0x7f01001d
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#bar_length}
-          attribute's value can be found in the {@link #ColorBars} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:bar_length
-        */
-        public static final int ColorBars_bar_length = 1;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#bar_orientation_horizontal}
-          attribute's value can be found in the {@link #ColorBars} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:bar_orientation_horizontal
-        */
-        public static final int ColorBars_bar_orientation_horizontal = 4;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#bar_pointer_halo_radius}
-          attribute's value can be found in the {@link #ColorBars} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:bar_pointer_halo_radius
-        */
-        public static final int ColorBars_bar_pointer_halo_radius = 3;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#bar_pointer_radius}
-          attribute's value can be found in the {@link #ColorBars} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:bar_pointer_radius
-        */
-        public static final int ColorBars_bar_pointer_radius = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#bar_thickness}
-          attribute's value can be found in the {@link #ColorBars} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:bar_thickness
-        */
-        public static final int ColorBars_bar_thickness = 0;
-        /** Attributes that can be used with a ColorPicker.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #ColorPicker_color_center_halo_radius com.example.lansosdkplaydemo:color_center_halo_radius}</code></td><td></td></tr>
-           <tr><td><code>{@link #ColorPicker_color_center_radius com.example.lansosdkplaydemo:color_center_radius}</code></td><td></td></tr>
-           <tr><td><code>{@link #ColorPicker_color_pointer_halo_radius com.example.lansosdkplaydemo:color_pointer_halo_radius}</code></td><td></td></tr>
-           <tr><td><code>{@link #ColorPicker_color_pointer_radius com.example.lansosdkplaydemo:color_pointer_radius}</code></td><td></td></tr>
-           <tr><td><code>{@link #ColorPicker_color_wheel_radius com.example.lansosdkplaydemo:color_wheel_radius}</code></td><td></td></tr>
-           <tr><td><code>{@link #ColorPicker_color_wheel_thickness com.example.lansosdkplaydemo:color_wheel_thickness}</code></td><td></td></tr>
-           </table>
-           @see #ColorPicker_color_center_halo_radius
-           @see #ColorPicker_color_center_radius
-           @see #ColorPicker_color_pointer_halo_radius
-           @see #ColorPicker_color_pointer_radius
-           @see #ColorPicker_color_wheel_radius
-           @see #ColorPicker_color_wheel_thickness
-         */
-        public static final int[] ColorPicker = {
-            0x7f010013, 0x7f010014, 0x7f010015, 0x7f010016,
-            0x7f010017, 0x7f010018
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#color_center_halo_radius}
-          attribute's value can be found in the {@link #ColorPicker} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:color_center_halo_radius
-        */
-        public static final int ColorPicker_color_center_halo_radius = 3;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#color_center_radius}
-          attribute's value can be found in the {@link #ColorPicker} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:color_center_radius
-        */
-        public static final int ColorPicker_color_center_radius = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#color_pointer_halo_radius}
-          attribute's value can be found in the {@link #ColorPicker} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:color_pointer_halo_radius
-        */
-        public static final int ColorPicker_color_pointer_halo_radius = 5;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#color_pointer_radius}
-          attribute's value can be found in the {@link #ColorPicker} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:color_pointer_radius
-        */
-        public static final int ColorPicker_color_pointer_radius = 4;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#color_wheel_radius}
-          attribute's value can be found in the {@link #ColorPicker} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:color_wheel_radius
-        */
-        public static final int ColorPicker_color_wheel_radius = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#color_wheel_thickness}
-          attribute's value can be found in the {@link #ColorPicker} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:color_wheel_thickness
-        */
-        public static final int ColorPicker_color_wheel_thickness = 1;
-        /** Attributes that can be used with a CustomImageView.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #CustomImageView_borderRadius com.example.lansosdkplaydemo:borderRadius}</code></td><td> ====================CustomImageView============ </td></tr>
-           <tr><td><code>{@link #CustomImageView_src com.example.lansosdkplaydemo:src}</code></td><td></td></tr>
-           <tr><td><code>{@link #CustomImageView_type com.example.lansosdkplaydemo:type}</code></td><td></td></tr>
-           </table>
-           @see #CustomImageView_borderRadius
-           @see #CustomImageView_src
-           @see #CustomImageView_type
-         */
-        public static final int[] CustomImageView = {
-            0x7f010020, 0x7f010021, 0x7f010022
-        };
-        /**
-          <p>
-          @attr description
-           ====================CustomImageView============ 
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          <p>This is a private symbol.
-          @attr name com.example.lansosdkplaydemo:borderRadius
-        */
-        public static final int CustomImageView_borderRadius = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#src}
-          attribute's value can be found in the {@link #CustomImageView} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.lansosdkplaydemo:src
-        */
-        public static final int CustomImageView_src = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#type}
-          attribute's value can be found in the {@link #CustomImageView} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>circle</code></td><td>0</td><td></td></tr>
-<tr><td><code>round</code></td><td>1</td><td></td></tr>
-</table>
-          @attr name com.example.lansosdkplaydemo:type
-        */
-        public static final int CustomImageView_type = 1;
-        /** Attributes that can be used with a PullToRefresh.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #PullToRefresh_ptrAdapterViewBackground com.example.lansosdkplaydemo:ptrAdapterViewBackground}</code></td><td> BELOW HERE ARE DEPRECEATED.</td></tr>
-           <tr><td><code>{@link #PullToRefresh_ptrAnimationStyle com.example.lansosdkplaydemo:ptrAnimationStyle}</code></td><td> Style of Animation should be used displayed when pulling.</td></tr>
-           <tr><td><code>{@link #PullToRefresh_ptrDrawable com.example.lansosdkplaydemo:ptrDrawable}</code></td><td> Drawable to use as Loading Indicator.</td></tr>
-           <tr><td><code>{@link #PullToRefresh_ptrDrawableBottom com.example.lansosdkplaydemo:ptrDrawableBottom}</code></td><td></td></tr>
-           <tr><td><code>{@link #PullToRefresh_ptrDrawableEnd com.example.lansosdkplaydemo:ptrDrawableEnd}</code></td><td> Drawable to use as Loading Indicator in the Footer View.</td></tr>
-           <tr><td><code>{@link #PullToRefresh_ptrDrawableStart com.example.lansosdkplaydemo:ptrDrawableStart}</code></td><td> Drawable to use as Loading Indicator in the Header View.</td></tr>
-           <tr><td><code>{@link #PullToRefresh_ptrDrawableTop com.example.lansosdkplaydemo:ptrDrawableTop}</code></td><td></td></tr>
-           <tr><td><code>{@link #PullToRefresh_ptrHeaderBackground com.example.lansosdkplaydemo:ptrHeaderBackground}</code></td><td> A drawable to use as the background of the Header and Footer Loading Views </td></tr>
-           <tr><td><code>{@link #PullToRefresh_ptrHeaderSubTextColor com.example.lansosdkplaydemo:ptrHeaderSubTextColor}</code></td><td> Text Color of the Header and Footer Loading Views Sub Header </td></tr>
-           <tr><td><code>{@link #PullToRefresh_ptrHeaderTextAppearance com.example.lansosdkplaydemo:ptrHeaderTextAppearance}</code></td><td> Base text color, typeface, size, and style for Header and Footer Loading Views </td></tr>
-           <tr><td><code>{@link #PullToRefresh_ptrHeaderTextColor com.example.lansosdkplaydemo:ptrHeaderTextColor}</code></td><td> Text Color of the Header and Footer Loading Views </td></tr>
-           <tr><td><code>{@link #PullToRefresh_ptrListViewExtrasEnabled com.example.lansosdkplaydemo:ptrListViewExtrasEnabled}</code></td><td>
-        	Whether PullToRefreshListView has it's extras enabled.</td></tr>
-           <tr><td><code>{@link #PullToRefresh_ptrMode com.example.lansosdkplaydemo:ptrMode}</code></td><td> Mode of Pull-to-Refresh that should be used </td></tr>
-           <tr><td><code>{@link #PullToRefresh_ptrOverScroll com.example.lansosdkplaydemo:ptrOverScroll}</code></td><td> Whether Android's built-in Over Scroll should be utilised for Pull-to-Refresh.</td></tr>
-           <tr><td><code>{@link #PullToRefresh_ptrRefreshableViewBackground com.example.lansosdkplaydemo:ptrRefreshableViewBackground}</code></td><td> A drawable to use as the background of the Refreshable View </td></tr>
-           <tr><td><code>{@link #PullToRefresh_ptrRotateDrawableWhilePulling com.example.lansosdkplaydemo:ptrRotateDrawableWhilePulling}</code></td><td>
-        	Whether the Drawable should be continually rotated as you pull.</td></tr>
-           <tr><td><code>{@link #PullToRefresh_ptrScrollingWhileRefreshingEnabled com.example.lansosdkplaydemo:ptrScrollingWhileRefreshingEnabled}</code></td><td> Whether the user can scroll while the View is Refreshing </td></tr>
-           <tr><td><code>{@link #PullToRefresh_ptrShowIndicator com.example.lansosdkplaydemo:ptrShowIndicator}</code></td><td> Whether the Indicator overlay(s) should be used </td></tr>
-           <tr><td><code>{@link #PullToRefresh_ptrSubHeaderTextAppearance com.example.lansosdkplaydemo:ptrSubHeaderTextAppearance}</code></td><td> Base text color, typeface, size, and style for Header and Footer Loading Views Sub Header </td></tr>
-           </table>
-           @see #PullToRefresh_ptrAdapterViewBackground
-           @see #PullToRefresh_ptrAnimationStyle
-           @see #PullToRefresh_ptrDrawable
-           @see #PullToRefresh_ptrDrawableBottom
-           @see #PullToRefresh_ptrDrawableEnd
-           @see #PullToRefresh_ptrDrawableStart
-           @see #PullToRefresh_ptrDrawableTop
-           @see #PullToRefresh_ptrHeaderBackground
-           @see #PullToRefresh_ptrHeaderSubTextColor
-           @see #PullToRefresh_ptrHeaderTextAppearance
-           @see #PullToRefresh_ptrHeaderTextColor
-           @see #PullToRefresh_ptrListViewExtrasEnabled
-           @see #PullToRefresh_ptrMode
-           @see #PullToRefresh_ptrOverScroll
-           @see #PullToRefresh_ptrRefreshableViewBackground
-           @see #PullToRefresh_ptrRotateDrawableWhilePulling
-           @see #PullToRefresh_ptrScrollingWhileRefreshingEnabled
-           @see #PullToRefresh_ptrShowIndicator
-           @see #PullToRefresh_ptrSubHeaderTextAppearance
-         */
-        public static final int[] PullToRefresh = {
-            0x7f010000, 0x7f010001, 0x7f010002, 0x7f010003,
-            0x7f010004, 0x7f010005, 0x7f010006, 0x7f010007,
-            0x7f010008, 0x7f010009, 0x7f01000a, 0x7f01000b,
-            0x7f01000c, 0x7f01000d, 0x7f01000e, 0x7f01000f,
-            0x7f010010, 0x7f010011, 0x7f010012
-        };
-        /**
-          <p>
-          @attr description
-           BELOW HERE ARE DEPRECEATED. DO NOT USE. 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          <p>This is a private symbol.
-          @attr name com.example.lansosdkplaydemo:ptrAdapterViewBackground
-        */
-        public static final int PullToRefresh_ptrAdapterViewBackground = 16;
-        /**
-          <p>
-          @attr description
-           Style of Animation should be used displayed when pulling. 
-
-
-          <p>Must be one or more (separated by '|') of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>rotate</code></td><td>0x0</td><td></td></tr>
-<tr><td><code>flip</code></td><td>0x1</td><td></td></tr>
-</table>
-          <p>This is a private symbol.
-          @attr name com.example.lansosdkplaydemo:ptrAnimationStyle
-        */
-        public static final int PullToRefresh_ptrAnimationStyle = 12;
-        /**
-          <p>
-          @attr description
-           Drawable to use as Loading Indicator. Changes both Header and Footer. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name com.example.lansosdkplaydemo:ptrDrawable
-        */
-        public static final int PullToRefresh_ptrDrawable = 6;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#ptrDrawableBottom}
-          attribute's value can be found in the {@link #PullToRefresh} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.lansosdkplaydemo:ptrDrawableBottom
-        */
-        public static final int PullToRefresh_ptrDrawableBottom = 18;
-        /**
-          <p>
-          @attr description
-           Drawable to use as Loading Indicator in the Footer View. Overrides value set in ptrDrawable. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name com.example.lansosdkplaydemo:ptrDrawableEnd
-        */
-        public static final int PullToRefresh_ptrDrawableEnd = 8;
-        /**
-          <p>
-          @attr description
-           Drawable to use as Loading Indicator in the Header View. Overrides value set in ptrDrawable. 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name com.example.lansosdkplaydemo:ptrDrawableStart
-        */
-        public static final int PullToRefresh_ptrDrawableStart = 7;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#ptrDrawableTop}
-          attribute's value can be found in the {@link #PullToRefresh} array.
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          @attr name com.example.lansosdkplaydemo:ptrDrawableTop
-        */
-        public static final int PullToRefresh_ptrDrawableTop = 17;
-        /**
-          <p>
-          @attr description
-           A drawable to use as the background of the Header and Footer Loading Views 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          <p>This is a private symbol.
-          @attr name com.example.lansosdkplaydemo:ptrHeaderBackground
-        */
-        public static final int PullToRefresh_ptrHeaderBackground = 1;
-        /**
-          <p>
-          @attr description
-           Text Color of the Header and Footer Loading Views Sub Header 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          <p>This is a private symbol.
-          @attr name com.example.lansosdkplaydemo:ptrHeaderSubTextColor
-        */
-        public static final int PullToRefresh_ptrHeaderSubTextColor = 3;
-        /**
-          <p>
-          @attr description
-           Base text color, typeface, size, and style for Header and Footer Loading Views 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name com.example.lansosdkplaydemo:ptrHeaderTextAppearance
-        */
-        public static final int PullToRefresh_ptrHeaderTextAppearance = 10;
-        /**
-          <p>
-          @attr description
-           Text Color of the Header and Footer Loading Views 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          <p>This is a private symbol.
-          @attr name com.example.lansosdkplaydemo:ptrHeaderTextColor
-        */
-        public static final int PullToRefresh_ptrHeaderTextColor = 2;
-        /**
-          <p>
-          @attr description
-          
-        	Whether PullToRefreshListView has it's extras enabled. This allows the user to be 
-        	able to scroll while refreshing, and behaves better. It acheives this by adding
-        	Header and/or Footer Views to the ListView.
-        
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          <p>This is a private symbol.
-          @attr name com.example.lansosdkplaydemo:ptrListViewExtrasEnabled
-        */
-        public static final int PullToRefresh_ptrListViewExtrasEnabled = 14;
-        /**
-          <p>
-          @attr description
-           Mode of Pull-to-Refresh that should be used 
-
-
-          <p>Must be one or more (separated by '|') of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>disabled</code></td><td>0x0</td><td></td></tr>
-<tr><td><code>pullFromStart</code></td><td>0x1</td><td></td></tr>
-<tr><td><code>pullFromEnd</code></td><td>0x2</td><td></td></tr>
-<tr><td><code>both</code></td><td>0x3</td><td></td></tr>
-<tr><td><code>manualOnly</code></td><td>0x4</td><td></td></tr>
-<tr><td><code>pullDownFromTop</code></td><td>0x1</td><td> These last two are depreacted </td></tr>
-<tr><td><code>pullUpFromBottom</code></td><td>0x2</td><td></td></tr>
-</table>
-          <p>This is a private symbol.
-          @attr name com.example.lansosdkplaydemo:ptrMode
-        */
-        public static final int PullToRefresh_ptrMode = 4;
-        /**
-          <p>
-          @attr description
-           Whether Android's built-in Over Scroll should be utilised for Pull-to-Refresh. 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          <p>This is a private symbol.
-          @attr name com.example.lansosdkplaydemo:ptrOverScroll
-        */
-        public static final int PullToRefresh_ptrOverScroll = 9;
-        /**
-          <p>
-          @attr description
-           A drawable to use as the background of the Refreshable View 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
-"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
-          <p>This is a private symbol.
-          @attr name com.example.lansosdkplaydemo:ptrRefreshableViewBackground
-        */
-        public static final int PullToRefresh_ptrRefreshableViewBackground = 0;
-        /**
-          <p>
-          @attr description
-          
-        	Whether the Drawable should be continually rotated as you pull. This only
-        	takes effect when using the 'Rotate' Animation Style.
-        
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          <p>This is a private symbol.
-          @attr name com.example.lansosdkplaydemo:ptrRotateDrawableWhilePulling
-        */
-        public static final int PullToRefresh_ptrRotateDrawableWhilePulling = 15;
-        /**
-          <p>
-          @attr description
-           Whether the user can scroll while the View is Refreshing 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          <p>This is a private symbol.
-          @attr name com.example.lansosdkplaydemo:ptrScrollingWhileRefreshingEnabled
-        */
-        public static final int PullToRefresh_ptrScrollingWhileRefreshingEnabled = 13;
-        /**
-          <p>
-          @attr description
-           Whether the Indicator overlay(s) should be used 
-
-
-          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-<p>May be a boolean value, either "<code>true</code>" or "<code>false</code>".
-          <p>This is a private symbol.
-          @attr name com.example.lansosdkplaydemo:ptrShowIndicator
-        */
-        public static final int PullToRefresh_ptrShowIndicator = 5;
-        /**
-          <p>
-          @attr description
-           Base text color, typeface, size, and style for Header and Footer Loading Views Sub Header 
-
-
-          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
-or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
-          <p>This is a private symbol.
-          @attr name com.example.lansosdkplaydemo:ptrSubHeaderTextAppearance
-        */
-        public static final int PullToRefresh_ptrSubHeaderTextAppearance = 11;
-        /** Attributes that can be used with a SlidingLayer.
-           <p>Includes the following attributes:</p>
-           <table>
-           <colgroup align="left" />
-           <colgroup align="left" />
-           <tr><th>Attribute</th><th>Description</th></tr>
-           <tr><td><code>{@link #SlidingLayer_closeOnTapEnabled com.example.lansosdkplaydemo:closeOnTapEnabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlidingLayer_offsetWidth com.example.lansosdkplaydemo:offsetWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlidingLayer_openOnTapEnabled com.example.lansosdkplaydemo:openOnTapEnabled}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlidingLayer_shadowDrawable com.example.lansosdkplaydemo:shadowDrawable}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlidingLayer_shadowWidth com.example.lansosdkplaydemo:shadowWidth}</code></td><td></td></tr>
-           <tr><td><code>{@link #SlidingLayer_stickTo com.example.lansosdkplaydemo:stickTo}</code></td><td></td></tr>
-           </table>
-           @see #SlidingLayer_closeOnTapEnabled
-           @see #SlidingLayer_offsetWidth
-           @see #SlidingLayer_openOnTapEnabled
-           @see #SlidingLayer_shadowDrawable
-           @see #SlidingLayer_shadowWidth
-           @see #SlidingLayer_stickTo
-         */
-        public static final int[] SlidingLayer = {
-            0x7f010025, 0x7f010026, 0x7f010027, 0x7f010028,
-            0x7f010029, 0x7f01002a
-        };
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#closeOnTapEnabled}
-          attribute's value can be found in the {@link #SlidingLayer} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:closeOnTapEnabled
-        */
-        public static final int SlidingLayer_closeOnTapEnabled = 2;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#offsetWidth}
-          attribute's value can be found in the {@link #SlidingLayer} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:offsetWidth
-        */
-        public static final int SlidingLayer_offsetWidth = 4;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#openOnTapEnabled}
-          attribute's value can be found in the {@link #SlidingLayer} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:openOnTapEnabled
-        */
-        public static final int SlidingLayer_openOnTapEnabled = 3;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#shadowDrawable}
-          attribute's value can be found in the {@link #SlidingLayer} array.
-
-
-          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:shadowDrawable
-        */
-        public static final int SlidingLayer_shadowDrawable = 0;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#shadowWidth}
-          attribute's value can be found in the {@link #SlidingLayer} array.
-
-
-          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
-Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
-in (inches), mm (millimeters).
-<p>This may also be a reference to a resource (in the form
-"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
-theme attribute (in the form
-"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
-containing a value of this type.
-          @attr name com.example.lansosdkplaydemo:shadowWidth
-        */
-        public static final int SlidingLayer_shadowWidth = 1;
-        /**
-          <p>This symbol is the offset where the {@link com.example.lansosdkplaydemo.R.attr#stickTo}
-          attribute's value can be found in the {@link #SlidingLayer} array.
-
-
-          <p>Must be one of the following constant values.</p>
-<table>
-<colgroup align="left" />
-<colgroup align="left" />
-<colgroup align="left" />
-<tr><th>Constant</th><th>Value</th><th>Description</th></tr>
-<tr><td><code>auto</code></td><td>0</td><td></td></tr>
-<tr><td><code>right</code></td><td>-1</td><td></td></tr>
-<tr><td><code>left</code></td><td>-2</td><td></td></tr>
-<tr><td><code>middle</code></td><td>-3</td><td></td></tr>
-<tr><td><code>top</code></td><td>-4</td><td></td></tr>
-<tr><td><code>bottom</code></td><td>-5</td><td></td></tr>
-</table>
-          @attr name com.example.lansosdkplaydemo:stickTo
-        */
-        public static final int SlidingLayer_stickTo = 5;
-    };
 }
